@@ -1,0 +1,369 @@
+
+\documentclass[a4paper,twoside,openany]{article}
+
+% --- Langue / encodage ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\sloppy
+
+% --- Mise en page ---
+\usepackage{geometry}
+\geometry{hmargin=3cm,vmargin=2cm,marginparwidth=2.2cm,marginparsep=0.5cm}
+\linespread{1.15}
+
+% --- Tableaux et transcription ---
+\usepackage{graphicx}
+\usepackage{marginnote}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{csquotes}
+\usepackage{enumitem}
+\usepackage{fancyvrb}
+\usepackage[strings]{underscore}
+
+% --- Index ---
+\usepackage{makeidx}
+\usepackage{imakeidx}
+\makeindex[name=nom,title=Index nominum,columns=1]
+\makeindex[name=lieu,title=Index locorum,columns=1]
+\makeindex[name=notion,title=Index rerum,columns=1]
+
+\newcommand{\idxnom}[1]{#1\index[nom]{#1}}
+\newcommand{\idxlieu}[1]{#1\index[lieu]{#1}}
+\newcommand{\idxnotion}[1]{#1\index[notion]{#1}}
+
+% --- Glossaire ---
+\usepackage{glossaries}
+\makeglossaries
+
+\newglossaryentry{communaux}{name=communaux,description={Biens collectifs dont l'usage appartient à une communauté d'habitants, notamment pour le pâturage, le bois ou d'autres usages ruraux.}}
+\newglossaryentry{fondspropres}{name=fonds propres,description={Biens possédés à titre particulier, par opposition aux communaux.}}
+\newglossaryentry{albergement}{name=albergement,description={Contrat de concession, fréquent dans les pays savoyards, par lequel un seigneur concède un bien ou un droit moyennant redevance et reconnaissance.}}
+\newglossaryentry{domaineDirect}{name=domaine direct,description={Droit éminent conservé par le seigneur sur un bien concédé à un tenancier ou à une communauté.}}
+\newglossaryentry{reconnaissance}{name=reconnaissance,description={Acte par lequel un tenancier reconnaît tenir un bien ou un droit d'un seigneur, avec indication des charges dues.}}
+\newglossaryentry{prescription}{name=prescription,description={Mode d'acquisition ou de consolidation d'un droit par l'effet d'une possession prolongée et non interrompue.}}
+\newglossaryentry{possessionImmemoriale}{name=possession immémoriale,description={Possession si ancienne qu'elle est réputée excéder la mémoire des hommes et peut, dans l'argumentation judiciaire, tenir lieu de preuve.}}
+\newglossaryentry{mappe}{name=mappe,description={Plan cadastral dressé lors de la mensuration générale des États de Savoie au XVIIIe siècle.}}
+\newglossaryentry{mensurationGenerale}{name=mensuration générale,description={Opération cadastrale menée dans les États de Savoie afin de mesurer les biens et d'établir la mappe et les registres cadastraux.}}
+\newglossaryentry{lettresPatentes}{name=lettres patentes,description={Acte souverain ouvrant ou autorisant une procédure, une concession ou une décision administrative.}}
+\newglossaryentry{confrerieSaintEsprit}{name=confrérie du Saint-Esprit,description={Institution confraternelle détenant ici des biens dans la vallée de Treicol, administrés par les syndics et conseil des Chapelles.}}
+\newglossaryentry{leyde}{name=leyde,description={Droit perçu sur certaines marchandises, denrées ou bestiaux, notamment dans le cadre de foires, marchés ou usages seigneuriaux.}}
+\newglossaryentry{alpeage}{name=alpéage,description={Redevance liée à l'usage des alpages ou montagnes pastorales.}}
+\newglossaryentry{eauxPendantes}{name=eaux pendantes,description={Ligne de partage des eaux utilisée comme critère de délimitation territoriale en zone de montagne.}}
+
+% --- Bibliographie ---
+\usepackage[backend=biber,citestyle=verbose-trad2,bibstyle=verbose-trad2,citepages=omit,ibidpage=true,idemtracker=constrict,hyperref=false,sorting=nyt]{biblatex}
+\bibliography{bibliographie.bib}
+
+\title{Litige entre les communautés de Saint-Maxime de Beaufort et des Chapelles\\au sujet de la vallée de Treicol\\(Acte d'Establissement des Demandes, 23 février 1779)}
+\author{Nicolas Morane\\Master SDH -- Université Paris 1 Panthéon-Sorbonne}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Présentation du document}
+
+Le texte édité ci-dessous est un \textit{Acte d'Establissement des Demandes} daté du 23 février 1779. Il appartient au contentieux opposant les syndics et conseil de la communauté de \idxlieu{Saint-Maxime de Beaufort} aux syndics et conseil de la communauté des \idxlieu{Chapelles}, au sujet de la \idxlieu{vallée de Treicol}. Le document se présente comme un mémoire judiciaire produit devant l'Intendant de \idxlieu{Tarentaise}, délégué dans cette affaire.
+
+L'enjeu principal est double. D'une part, il s'agit de déterminer si la vallée de Treicol doit être portée et cadastrée dans les \gls{mappe}s et cadastres de Saint-Maxime ou dans ceux des Chapelles. D'autre part, il s'agit de fixer les droits respectifs des communautés sur les \gls{communaux}, les \gls{fondspropres} et les droits d'usage pastoraux attachés à cette vallée.
+
+Cette édition reprend la transcription disponible sans chercher à compléter les lacunes signalées par des crochets ou des points de suspension. Les lectures incertaines ont été conservées sous la forme où elles figurent dans le document de travail.
+
+\subsection{Résumé des arguments juridiques}
+
+Le mémoire de Saint-Maxime repose d'abord sur l'argument de la \gls{possessionImmemoriale}. Les habitants de Saint-Maxime affirment avoir toujours usé des communaux de Treicol, avec leurs troupeaux, publiquement, paisiblement et sans contradiction. Cette possession est présentée comme constante, non interrompue et excédant la mémoire des hommes.
+
+Le second argument consiste à limiter les droits des Chapelles à la jouissance d'une montagne propre située dans la vallée. Les Chapelles ne seraient donc pas propriétaires des communaux de Treicol dans leur ensemble, mais seulement usagères ou propriétaires d'un fonds particulier, au même titre que d'autres possesseurs de fonds propres.
+
+Le troisième argument consiste à affirmer que la possession vaut titre. Le mémoire soutient qu'un titre d'acquisition en faveur de Saint-Maxime a pu exister et se perdre avec le temps, mais que la possession immémoriale, voire la simple \gls{prescription} trentenaire, suffirait à faire présumer ou à consolider le droit de Saint-Maxime.
+
+Le quatrième argument est dirigé contre les titres produits par les Chapelles. Le contrat emphytéotique de 1347, les reconnaissances de 1530 et celles de 1569 sont interprétés non comme la preuve d'un droit actuel des Chapelles, mais comme la trace de droits anciens qui auraient été aliénés. Les titres adverses sont donc retournés contre ceux qui les produisent.
+
+Le cinquième argument porte sur les opérations cadastrales. Saint-Maxime soutient que la représentation de Treicol dans les mappes est fautive et contraire au principe selon lequel les limites doivent suivre les hautes cimes et les \gls{eauxPendantes}. L'erreur de la \gls{mensurationGenerale} devrait donc être réparée par le rattachement cadastral de la vallée à Saint-Maxime.
+
+Enfin, le mémoire écarte les arguments de nature religieuse ou spirituelle. La présence de la chapelle Saint-Théodule, les réparations qui y auraient été faites et les actes produits devant l'archevêque de Tarentaise ne prouvent pas, selon Saint-Maxime, que la vallée appartienne aux Chapelles sur le plan foncier.
+
+\section{Principaux titres et documents anciens invoqués}
+
+\begin{longtable}{p{3cm}p{5.2cm}p{7cm}}
+\toprule
+Date & Nature du document & Fonction dans l'argumentation \\
+\midrule
+14 juillet 1347 & Contrat emphytéotique ou \gls{albergement} & Titre invoqué par les Chapelles, mais contesté par Saint-Maxime comme insuffisant ou étranger aux communaux actuels de Treicol. \\
+11 septembre 1460 & \gls{reconnaissance} & Mentionnée pour montrer la diversité des domaines directs dans la vallée ou autour de Treicol. \\
+16 février 1490 & \gls{reconnaissance} & Même usage que la reconnaissance de 1460, notamment à propos du domaine direct du prieur et des seigneurs de Montmeillant et des Salins. \\
+20 et 25 juin 1530 & Reconnaissances & Utilisées pour discuter les droits anciennement reconnus et l'éventuelle aliénation des communaux. \\
+22 août 1569 & Reconnaissance de François Dunand & Pièce invoquée pour appuyer l'idée que les anciens droits des Chapelles auraient été aliénés. \\
+22 novembre 1569 & Reconnaissance de la communauté des Chapelles & Présentée comme ne reconnaissant pas les communaux de Treicol, mais seulement un usage d'achat de bois au Leysen. \\
+16 novembre 1599 & Inféodation du comté de Saint-Maurice & Titre discuté à propos des confins, notamment du côté du Bonhomme, du Biollet, de Roselend et de Treicol. \\
+1642 & Enquête & Produite par les Chapelles à propos de la chapelle Saint-Théodule ; Saint-Maxime en conteste la pertinence foncière. \\
+11 août 1656 & Requête à l'archevêque de Tarentaise & Pièce religieuse jugée non pertinente pour établir un droit de propriété sur Treicol. \\
+1659 & Transaction & Document central pour établir qu'une portion de la vallée a anciennement été taillée rière Saint-Maxime et une autre rière les Chapelles. \\
+2 juillet 1651 & Acte relatif à la chapelle Saint-Théodule & Produit par les Chapelles ; Saint-Maxime refuse d'en tirer une conséquence territoriale. \\
+6 juin 1702 & Acte relatif à la chapelle Saint-Théodule & Même usage que l'acte précédent. \\
+20 octobre 1728 & Manifeste sur la mensuration générale & Sert à soutenir que les limites doivent suivre les hautes cimes et les eaux pendantes. \\
+20 octobre 1730 & Ordonnance de l'Intendant & Pièce procédurale demandée ou discutée dans le mémoire. \\
+10 août 1732 & Vente d'une portion de terrain aux Chapelles & Vente critiquée comme nulle ou seulement figurative, et insuffisante pour rattacher Treicol aux Chapelles. \\
+7 septembre 1733 & Ordonnance de l'Intendant général Bonnaud & Ordonnance que Saint-Maxime demande de ne pas suivre pour le cadastrage de Treicol. \\
+25 mai 1777 & Lettres patentes & Acte ouvrant ou autorisant la procédure entre les communautés. \\
+22 août 1777 & Décret du Sénat & Décret ordonnant l'enregistrement des lettres patentes. \\
+\bottomrule
+\end{longtable}
+
+\section{Transcription}
+
+\marginnote{\scriptsize Feuillet 1}
+
+Volume de la Communauté de Beaufort
+
+Acte d'Establissement des Demandes
+
+Du vingt-trois Février mil sept cent septante neuf remis le dit jour
+
+Du procès des Sindic et Conseil de la communauté de St Maxime de Beaufort respectivement demandeurs et défendeurs contre les Sindic et Conseil de la communauté des Chapelles, aussi demandeurs et défendeurs,
+
+A comparu au greffe de monsieur l'Intendant de Tarantaise, en cette partie délégué, Nicolas [nancier ?]  Berret en qualité de député de la dite Communauté de St Maxime, par délibération du vingt un courant, Blanc notaire, ici produite, lequel pour satisfaire à l'ordonnance du douze septembre dernier portant que les [...]
+
+\marginnote{\scriptsize verso}
+
+[...(2 lignes)] les dits sindic et conseil de St Maxime contre ceux […] Chapelles substituant pour leur procureur Me Escoffier présent et acceptant avec élection de domicile et clauses requises, après quoi il [conclut~?] de l’avis du sousigné, primo à ce que les dits sindic et conseil des Chapelles soient débouté des conclusion reconventionnelles par eux prises dans leur mémoire du dit jour douze septembre en ce qui concerne les second chef d’icelle et à […] qu’il soit au contraire dit et ordonné que toute la vallée de Treicol sera portée et cadastrée dans les mappes et cadastre de Saint Maxime tant pour les fonds propres que [...]
+
+\marginnote{\scriptsize Feuillet 2}
+
+pour les communaux et c’est au besoin, sans s’arrêter à l’ordonnance rendue par le seigneur Intendant général [Bonnaud~?] le sept septembre mil sept cent trente-trois, ni à celles qui y sont énoncées, secundo à ce que les dits Sindic et Conseil des Chapelles soient pareillement déboutés du premier chef de leurs dites conclusions, sauf à eux de se prévaloir de l’offre ici fait, de leur laisser la libre jouissance et possession de la part qu’ils peuvent leur compéter des communaux existants dans la vallée de Treicol, en indivision avec les Sindic et Conseil de St Maxime, et des [...] fonds en propriété vière la dite vallée [...]
+
+\marginnote{\scriptsize verso}
+par proportion seulement aux bénéfices que le dit Sindic et Conseil des Chapelles sont en possession d'en retirer, à cause de ce qu'ils possèdent à titre de propriété exclusive dans la dite vallée, et à celui qu'en retirent, et sont en possession d'en retirer, non seulement les autres propriétaires des fonds propres de la dite vallée, mais encore tous les autres particuliers de la Paroisse de St Maxime. La demande d'adjudication des dépens, et l'on proteste de poursuivre les conclusions prises afin des partages, par les mémoires du neuf septembre mil sept cent septante sept après qu’il aura été dit droit conformément à celles-ci dessus et pour s’en assurer les succès, l’on produit les lettre patentes du vingt cinq [...]
+
+\marginnote{\scriptsize Feuillet 3}
+
+Mai mil sept cent septante sept, avec les suppliques sur lesquelles elles ont été accordées  le plan local qui y est énoncé, et le décret du Sénat portant ordre de les enregistrer en date du vingt-deux août suivant ; plus on produit en un volume de trente-sept feuilles utiles toutes les procédures sommaires faites jusque à présent entre les parties en vertu des dites lettres patentes ; ledit volume commençant par la requête présentée à Mrs les Délégués par les Sindic et Conseil de St Maxime le vingt-huit dudit août mil sept cent septante sept et fini par un extrait du mémoire donné par les Sindic et Conseil des Chapelles le douze [...]
+
+\marginnote{\scriptsize verso}
+septembre dernier, suivant l’écriture du vingt-trois janvier […] par laquelle ils en ont fait l'emploi, l'on produit enfin les mêmes pièces que ceux de St Maxime et ont exhibées par leur mémoire du vingt-quatre juillet année dernière, toute laquelle productions n’est cependant employée  qu'aux endroits favorables, la rejetant pour le surplus et l'on requiert que l’on produise […] les pièces employées dans le mémoire du cinq février mil sept cent septante huit, notamment l'ordonnance de M. l'Intendant [M~?], en date du vingt octobre mil sept cent trente, et pour assurer toujours mieux les succès des conclusions [...]
+
+\marginnote{\scriptsize Feuillet 4}
+
+Ci de plus, l'on requiert, sans préjudice des preuves littérales résultantes des pièces respectivement employées et des aveux adverses, […] l’on ne veut ni entend point s'en départir, ainsi qu'on en proteste expressément et de ne vouloir s'astreindre à rien des superflus, que les Sindic et Conseil des Chapelles donnent leurs articles en faits contraires à ceux ci-après, savoir primo : Que depuis trente et quarante ans, et même depuis un temps excédant la mémoire des hommes, les particuliers de la Communauté de St Maxime, processeurs ou non processeurs des fonds propres de la Vallée de Treicol, sont [...]
+
+\marginnote{\scriptsize verso}
+ et ont toujours été dans la possession constante, et non interrompue des communaux de la dite vallée conjointement et en indivision, non seulement avec les Sindic et Conseil de la Paroisse des Chapelles, comme possesseurs propriétaires d'une montagne propre, mais encore avec tous les autres possesseurs propriétaires des autres fonds propres de cette même vallée ; ce qui est si vrai que les dits processeurs de St Maxime, sans distinction, de tous temps menés fait paître leurs bestiaux dans tous les dits communaux, c'est à dire tant dans ceux qui ont été portés dans la mappe et registre de la Paroisse des Chapelles, que dans les autres, quand bon leur a semblé et [...]
+
+\marginnote{\scriptsize Feuillet 5}
+
+conjointement avec les bestiaux des possesseurs propriétaires des fonds propres, ou de leurs censiers, au vu et […] d'iceux, et sans aucun contredit de leur part et notamment de ceux de la Communauté des Chapelles ; secundo, que depuis trente, quarante ans, et depuis un temps immémorial, les Sindic et Conseil des Chapelles n'ont jamais joui des dits communaux que comme propriétaires d'une montagne propre dans la dite vallée, par le ministère de leurs censiers, par proportion à cette propriété et conjointement et en indivision avec les autres possesseurs des fonds propres de la dite vallée et avec les autres particuliers de St Maxime [...]
+
+\marginnote{\scriptsize verso}
+possesseurs ou non possesseurs des dits fonds propres dans distinction, ce qui est si vrai que jamais aucun des particuliers de la dite Communauté des Chapelles n'a mené paître des bestiaux dans les dits communaux, sauf ceux qui se sont trouvés dans différents temps possesseurs de quelques fonds propres dans la dite vallée, ou censiers de la montagne propre de la dite Communauté, ou d'autres fonds propres ; tertio, que les contenus des deux faits articulés ci-dessus est de notoriété publique, les modernes l'ayant toujours vu pratiquer ainsi, et ouï dire à leurs anciens, qui le tenaient de plus anciens qu'eux, que le tout s’était de tous temps pratiqué de la manière [...] sans que l’on […]
+
+\marginnote{\scriptsize Feuillet 6}
+
+ait jamais ouï dire le contraire. Il parait inutile, après cela, d'entrer dans la réfutation détaillée des allégations contenues dans le dernier mémoire des Sindic et Conseil de la Communauté des Chapelles, puisque c'est la possession seule qui doit servir de règle, relativement au second chef des conclusions prises ci-dessus, aussi n'est-ce que pour abonder, et sans aucun aveux ni conséquence préjudiciable, qu’on abserve que quand l'extrait du contrat emphytéotique du quatorze juillet mil trois cent quarante-sept, serait même en forme probante, il ne serait d'aucune utilité pour l'intention adverse, ce contrat ne comprenant que les seuls communaux les particuliers de la [...]
+
+\marginnote{\scriptsize verso}
+ Chapelles avoient joui jusqu’alors […] ils étaient au contraire des […] à ce qui ne sauraient regarder les communaux actuels de Treicol, et d'autant moins qu'il n’aurait été fait que salvo jure cujuslibet alterius personae (sans préjudice des droits de toute autre personne) clause suffisante pour mettre à couvert les droits de la communauté de St Maxime ; En effet les vieux  châtelain de Tarentaise n'a albergé ni voulu albergé , que les communaux appartenant aux Princes, aux actuels de Treicol, qui n'en sont pas de ce nombre, comme on les [ ] au besoin  pourraient donc toujours moins y être compris ; et à tout supposer, s'agissant de biens très aliénables, la communauté de St Maxime [...]
+
+\marginnote{\scriptsize Feuillet 7}
+
+serait présumer les avoir acquis surtout en vertu de sa possession immémoriale, qui fait présumer les titres, et en tient même lieu, et il est aisé dans la Paroisse de St Maxime qu'elle a eu en effet un titre légitime d'acquisition des dits communaux qui s'est égaré par la succession des temps, ainsi que la plus part des autres titres d'icelle, ce qui n'est même observé qu'en passant, et très surabondamment, parce qu'il lui suffirait de la seule prescription trentenaire, et même de sa possession actuelle au regard à l'inutilité des titres prétendus sur lesquels la communauté des Chapelles tente vainement de fonder un droit de propriété en sa faveur, puisque ces [...]
+
+\marginnote{\scriptsize verso}
+titres, bien loin de favoriser le droit prétendu, servent au contraire à démontrer à l'évidence qu'il est purement chimérique ; car il ne résulterait autre chose des albergements énoncés dans les reconnaissances des vingt et vingt-cinq juin mil cinq cent trente, et vingt-deux décembre mil cinq cent soixante-neuf, sinon que les communaux qui auraient pu appartenir autrefois à la communauté des Chapelles, en vertu du contrat de mil trois cent quarante-sept, auroient tous été par elle aliénés.
+
+Pour se convaincre que cette conséquence serait très juste, il n'y a qu'à observer que la portion des anciens communaux de Treicol, qui aurait pu être comprise dans ces [...]
+
+\marginnote{\scriptsize Feuillet 8}
+
+contrat, et dépendre du domaine direct du Souverain, aurait dû être reconnu en faveur des successeurs de celui-ci ; dans les rénovations postérieures, ou par la communauté elle-même, si elle se trouvait encore la posséder, ou par les particuliers, en faveur de qui elle se serait trouvé l'avoir aliéné, or résultant des extraits des rénovations faites en faveur du prince, qu'il n'y a eu de reconnu en sa faveur que ce qui se trouverait porté par les reconnaissances des vingt et vingt-cinq juin mil cinq cent trente et vingt-deux décembre mil cinq cent [...]
+
+\marginnote{\scriptsize verso}
+ soixante-neuf, il en suivrait tout naturellement qu'il n'y aurait eu que [cela~?]le qui lui est [apparue/appartenu] en mil trois cent quarante-sept, et dont il […] prétendre du domaine direct, et résultant également des dites reconnaissances que la communauté aurait aliéné elle-même les communaux dont il y est fait état, il en suivrait tout aussi naturellement qu'elle se trouverait avoir aliéné tout ce qui avait été albergé en sa faveur en mil trois cent quarante-sept, lesquelles conséquences seraient encore aidées par l'extrait de la reconnaissance de François Dunand, en date du vingt-deux août mil [...]
+
+\marginnote{\scriptsize Feuillet 9}
+
+cinq cent soixante-neuf, et plus encore par l'extrait de la reconnaissance de la Communauté des Chapelles elle-même en date du vingt-deux novembre même année, puisqu'au lieu de reconnaitre aucun des communaux, ni autres biens de Treicol, elle n'a reconnu que l'usage et coutume d'acheter du bois du Leysen, situé dessus le plan de l'isle, près les prés de Treicol ; elle ne possédait donc déjà à cette époque plus rien de ce qui aurait dû lui avoir été albergé en mil trois cent quarante-sept ; et si les Sindic et Conseil de la dite Communauté possèdent aujourd'hui quelque chose dans la Vallée de Treicol, l'on sait après que ce n'est pas au nom d'icelle, mais seulement comme administrateurs des [...]
+
+\marginnote{\scriptsize verso}
+biens de leur confrérie du St Esprit, et pour se convaincre encore au besoin, toujours même que le domaine direct de la Vallée de Treicol a toujours appartenu, presque pour le tout, à d'autres qu'au Souverain, et mêmes qu'aux Marquis de St Maurice, il suffirait de jeter les yeux sur les extraits des reconnaissances des cinq un septembre mil quatre cent soixante, et seize février mil quatre cent nonante, et sur les […] adversairement exhibées, et aux feuillets indiqués par la Communauté des Chapelles, puisqu'il en résulte que tous les biens qui s'y trouvent reconnus sont rières Treicol, et étoient cependant du domaine direct du [...]
+
+\marginnote{\scriptsize Feuillet 10}
+
+[...] prieur et des Seigneurs de Montmeillant et des Salins ; c'est ainsi que tous les titres produits adversairement, loin d'obscurcir la vérité, comme ils y étaient destinés, ne servent au contraire qu'à démontrer à l'évidence que les prétentions de la Communauté des Chapelles sont sans apparence de fondement, en quoi l'on accepte et emploie même les productions des dits titres, les rejetant pour le surplus, et ce n'est qu'au besoin, et sans préjudice de cette acceptation qu'on oppose des défauts de formes probantes à ceux qui sont signés dans commission par les nommés [Douet et Mallet], étant naturel que ces titres prouvent contra producentem; quoi qu'ils ne prouveraient rien au préjudice de contre [...]
+
+\marginnote{\scriptsize verso}
+qu’ils ont été employés, l'on a déjà suffisamment démontré dans le mémoire du vingt-quatre juillet mil sept cent septante huit la frivolité des inductions qu’on a voulu tiré adversairement ; de l’inféodation du comté de St Maurice, en date du seize novembre mil cinq cent nonante neuf, et [ce] n’est que par exubérance, et sans préjudice, qu'on ajoute que l'on se trompe adversairement à ce qu'il paraît dans les confins de ce comté, en ce qui concerne le septentrion car c'est la haute cime et faîte de la montagne du Bon Homme qui sert d'unique confins de ce côté-là et si bien il est bien ajouté tendant au Biollet depuis [Roselen~?] tendant au bas de l'isle, dans la montagne de Treicol, etc. ce n'est que pour déterminer plus certainement [...]
+
+\marginnote{\scriptsize Feuillet 11}
+
+ce confins, c'est pour donner les confins du confins même, afin qu'on ne put pas s’y tromper autrement ce ne serait plus la haute cime et faîte de la montagne du Bon Homme qui servoit les confins de Septentrion
+La production adverse des deux […] des second juillet mil six cent cinquante dix, et six juin mil sept cent deux, est de même des plus inutiles, car quand même il en résulterait que les Sindic des Chapelles auraient fait réparer la chapelle de St Théodule dans la vallée de Treicol, fondée par un [Sgr] François Dunand, et autres Dunand, suivant les dires de Martin  Buthoz quatrième témoin ou dans l'enquête de mil six cent quarante-deux, aussi adversairement produite, il ne s'ensuivrait pas que la vallée de Treicol fût une dépendance de la Paroisse des Chapelles pour le spirituel, ce qui [...]
+
+\marginnote{\scriptsize verso}
+serait d'ailleurs de la dernière indifférence tout comme il l’est que la dite vallée soit du diocèse de Tarentaise, puisque tout le territoire de St Maxime et des autres paroisses de Beaufort […] l’on ne croit pas la communauté des Chapelles veuille en rien prétendre se trouver bien du même diocèse, la production adverse d'une requête présentée au Seigneur Archevêque de Tarentaise le onze aout mil six cent cinquante-six et du […] accordé sur icelle est donc bien tout à fait non pertinente.
+C'est bien vainement que l'on veut encore s'étayer adversairement sur ladite enquête de mil six cent quarante-deux, après les observations faites à ce sujet dans le mémoire du vingt-quatre juillet année dernière [...]
+
+\marginnote{\scriptsize Feuillet 12}
+
+Et après ce qui résulte de la transaction de mil six cent cinquante-neuf, et quand ils pourraient en induire quelque chose en leur faveur, encore non, ce ne serait qu'en produisant toutes les pièces et procédures du procès où la dite enquête a été rapportée, ou des [purgeant~?] par serment de ne pas les avoir, ni […] de les avoir, mais ce n'est pas de quoi il peut s'agir, non plus que des énonciations, des différentes reconnaissances et autres titres anciens, d’où l'on veut induire adversairement que toute la Vallée de Treicol dépendait autrefois du territoire de la paroisse des Chapelles, car il se voit par la susdite transaction ou il ne s’est partagé seulement de la montagne de [Parozan] et des halles, mais encore de tout le surplus de la dite Vallée qu'il y a eu anciennement dans tous les temps, une portion de cette Vallée, taillée en taille rière [...]
+
+\marginnote{\scriptsize verso}
+St Maxime, et très […]d’ycelle tout comme il y en avait une portion rière les Chapelles, ce qui n’avait rien de surprenant […] générales, par le motif que les communautés étaient partout en usage de cotiser leurs particuliers, même pour les biens situés hors de l'étendue de leur paroisse, et c'est par le motif sans doute que dans un tems tous les possesseurs des fonds propres de Treicol habitaient aux Chapelles, et que ces fonds s'y trouvèrent cotisés en taille qu'on l'a dit ; improprement que la Vallée était du territoire de cette communauté ; mais quand on supposerait encore ce que non que la Vallée de Treicol eut fait partie du territoire des Chapelles, avant la mensuration générale, s'en suivrait-il que les communaux [...]
+
+\marginnote{\scriptsize Feuillet 13}
+
+D'icelles eussent appartenu en propriété à cette communauté ? il vaudrait autant dire que tous les fonds quelconques de son territoire actuel lui appartiendraient, ce qui serait absurde, n'étant pas plus […] qu'une communauté ou des particuliers possédant des communaux dans l'étendue d'une paroisse étrangère que des fonds propres.
+L'on accepte les aveux adverses de la nullité du prétendu contrat de vente du dix aout mil sept cent trente-deux et de l'inaccessibilité de la portion de terrain dont vente est faite, pour parvenir à la vallée de Treicol depuis la paroisse des Chapelles, au moyen de quoi [l’intersecation~?] sur laquelle on fonde en partie le premier chef des conclusions ci-dessus,[...]
+
+\marginnote{\scriptsize verso}
+Subsiste toujours, et quand on pourrait encore soutenir la dite vente prétendues, l'union qui en résulterait ne pourrait être que figurative, serait absolument inutile, elle ne sauverait par d'ailleurs la confusion qui résulte de la manière dont la dite Vallée se trouve figurée sur les mappes respectives, où la contravention au manifeste du vingt octobre mil sept cent vingt-huit, qui prescrit la division des paroisses et à plus forte raison des provinces par les hautes cimes des montagnes et les eaux pendantes, et rien n'est plus aisé dans ce cas ainsi qu'il a été vérifié sur les lieux, et que les plans ci-dessus produits le démontrent ; d'ailleurs quel droit la communauté des Chapelles peut [...]
+
+\marginnote{\scriptsize Feuillet 14}
+
+elle avoir des […] à ce qu’on répare la faute faite lors de la mensuration générale ; elle n'en peut pas mesurer un sans doute de ce qu’auparavant l’on payait aux Chapelles  la taille d'une grande partie de la dite Vallée, ce payement de taille ne lui donnant point de droit sur les fonds cotisés ; elle ne serait pas d'ailleurs la seule communauté dont on avait étendu ou rétréci le territoire, au gré des souverains, et enfin il est avéré que la Vallée de Treicol est attenante à la paroisse de St Maxime et que l’exception d'une montagne propre appartenant aux sindics et conseil des Chapelles, comme administrateurs de leur confrérie du St Esprit, laquelle montagne ne forme qu'une très petite portion de cette Vallée, qui se[...]
+
+\marginnote{\scriptsize verso}
+se trouve très étendue, et à l'inscription encore de la montagne du Sgr Brian\c{c}on qui habite à Aime, les [...] possédée par des particuliers de St Maxime, qui tous de même que le dit Sgr Brian\c{c}on, bien loin de s'opposer à la réparation des mappes et cadastres, demandée par la communauté de St Maxime, la demanderont eux même au contraire, ainsi que l'on a lieu de le penser, […] même qu'il ne s'y sont pas opposés, en [paroissant] lors de l'ordonnance du neuf septembre mil sept cent septante sept, tellement que quand il s'agirait encore, ce que non, de se régler à ce sujet par la volonté des possesseurs des fonds de la Vallée de Treicol, ce serait celles des plus forts possesseurs qui [...]
+
+\marginnote{\scriptsize Feuillet 15}
+
+devait emporter la balance, et de cette manière le succès des conclusions de la communauté de St Maxime serait toujours plus assuré ; on proteste même de faire appeler de nouveau en cause le dit Sgr Brian\c{c}on, et les autres possesseurs, pour qu'ils aient à s'expliquer en tant que de besoin ; l'on rejette et nie sans préjudice le surplus des allégations contenues au mémoire employé adversairement, acceptant cependant les aveux favorables qui en résultent, et acte, signé à l'original curial.
+
+Conseil taxé vingt-quatre livres, payés par Me Michel Blanc, et Plaisance pour l'Excoffier procureur vacqué plus de trois heures pour la lecture, examen et vérification des titres employés dans le présent.
+
+Jean André Borneffe (?)
+
+
+\appendix
+
+\section{Concession de la leyde et de l'alpéage de Beaufort à Jean de Beaufort, 1360}
+
+Le document suivant, daté du 25 juin 1360, n'appartient pas directement au dossier judiciaire de 1779, mais il éclaire l'ancienneté des droits seigneuriaux et pastoraux attachés aux montagnes de la châtellenie de Beaufort. Le comte \idxnom{Amédée VI de Savoie} y assigne à \idxnom{Jean de Beaufort} une rente de dix florins d'or sur la \gls{leyde} et l'\gls{alpeage} des montagnes de Beaufort, tout en réservant le fief, le \gls{domaineDirect} et l'hommage.
+
+\subsection{Texte latin}
+
+\begin{Verbatim}
+1355 et 1360
+Concession d’une rente de 10 florins d’or par le comte de Savoie Amedé VI à noble Jean de Beaufort
+sur l’alpéage et la leyde de la vallée
+Nos Amedeus, comes Sabaudie, notum facimus universis
+quod, cum, consideratione servitiorum nobis fideliter
+impensorum per dictos fideles nostros Dominum Johanen
+(de Belloforti) militem, Guigonem, Petrum domicillos et
+Petrum Donzelli de eodem loco, in habenda et obtinenda
+possessione terre nostre Faucigniaci, pro nobis et nostris
+successoribus dederimus et concesserimus eisdem in
+augmentum feudorum que tenent a nobis et sub eisdem
+homagiis ad que pro suis aliis feudis tenebantur cuilibet
+ipsorum videlicet decem florenos auri de redditu per annum
+pro se et successoribus cujuslibet ipsorum in Castellania
+nostra Bellifortis assignandos prout in nostris litteris dicte
+donationis, datis Gebenn. die vicesima prima Julii anno
+millesimo trecentesimo quinquagesimo quinto plenius
+videtur contineri, de quibus nondum est assignatio facta.
+Volentes observare premissa, dicti Domini Johanis militis
+supplicationi inclinati, super hiis habita relatione Domini
+Aymonis de Chaland et Guillelmi Boni quibus hoc
+commisimus, referentium assignationem infrasciptam
+utilem esse.
+pro nobis et nostris successoribus, dicto Domino Johanni pro
+se et suis successoribus et heredibus universis, in
+assignationem decem florenorum auri dictorum, damus,
+tradimus et assignamus leyda[m] et alpagium nostrum
+montium castellanie Bellifortis pro quibus levatur annis
+singulis in festo Sancti Christophori, a quolibet faciente
+fructus in fructus montium usui diei cujus medietas ad nos in
+solidum pro leyda et due partes alterius medietatis pro
+alpagio et tertia pars certis nobilibus pertinent noscuntur de
+quibus pro nostris juribus predictis septem quintalia cum
+dimidio caseorum nobis computantur ad presens, quam
+quidem leydam et alpagium cum ipsorum emolumentis
+existentibus et juribus quibus cumque dicto Domino Johanni
+pro se et suis ut supra pro assignatione decem florenorum,
+in augmentum feudorum que tenet a nobis et sub eodem
+homagio… perpetuo tradimus atque damus et ipsum
+recipientem pro se et suis… per presentes investimus sibi
+concedentes omnia jura et actiones nobis competentes in
+predictis et singulis ipsorum… nihil retinentes preter
+feudum, directum dominium et homagium predict. Nos ea
+possidere constituentes ipsius Johannis procuratorem
+nomine donec ipsorum corporalem possessionem accipere
+et retinere valeat… (suit la formule de garantie ordinaire).
+Datum Camberiaci, die 25a Junii, anno 1360… sub nostro
+sigillo in testimonium premissorum per Dominum relatione
+Dominorum Aymonis de Challand, Petri de Montegil ?
+Johannis Ravisiis, cancellario, Guillelmi Boni facta per dictum
+Amonem de Challand…
+\end{Verbatim}
+
+\subsection{Traduction française de travail}
+
+\begin{Verbatim}
+Nous, Amédée, comte de Savoie, faisons savoir à tous que,
+considérant les services qui nous ont été fidèlement rendus
+par nos fidèles : messire Jean (de Beaufort), chevalier,
+Guigon, Pierre, damoiseau, et Pierre Donzel, du même lieu,
+dans l’acquisition et la conservation de la possession de
+notre terre du Faucigny, nous avons donné et concédé à
+chacun d’eux, pour nous et nos successeurs, en
+augmentation des fiefs qu’ils tiennent de nous, et sous les
+mêmes hommages auxquels ils sont tenus pour leurs autres
+fiefs : dix florins d’or de revenu par an, pour chacun d’eux et
+pour leurs successeurs, revenu qui devra être assigné dans
+notre châtellenie de Beaufort, ainsi qu’il est plus pleinement
+contenu dans nos lettres de ladite donation, données à
+Genève le 21 juillet 1355. Toutefois, l’assignation de ce
+revenu n’a pas encore été effectuée.
+Voulant observer ce qui précède, et inclinés à la requête du
+dit messire Jean, chevalier, après avoir reçu un rapport à ce
+sujet de messire Aymon de Chaland et Guillaume Bon,
+auxquels nous avions confié cette mission, ceux-ci
+rapportant que l’assignation ci-dessous était utile.
+Pour nous et nos successeurs, au dit messire Jean, pour lui et
+pour tous ses successeurs et héritiers, en assignation des dix
+florins d’or susdits, nous donnons, livrons et assignons la
+leyde et l’alpage qui nous appartiennent dans les montagnes
+de la châtellenie de Beaufort.
+Ces revenus sont levés chaque année à la fête de saint
+Christophe, sur tous ceux qui tirent profit des montagnes. Le
+produit de ces revenus est réparti ainsi : la moitié nous
+revient intégralement au titre de la leyde, les deux tiers de
+l’autre moitié reviennent pour l’alpage, le dernier tiers
+appartient à certains nobles. De ces droits qui nous
+appartiennent, sept quintaux et demi de fromages nous sont
+actuellement comptés. Cette leyde et cet alpage, avec tous
+les revenus et droits qui y sont attachés, nous les donnons et
+les concédons à perpétuité au dit messire Jean, pour lui et
+les siens, pour tenir lieu de l’assignation des dix florins, en
+augmentation des fiefs qu’il tient de nous et sous le même
+hommage. Par les présentes nous l’en investissons, lui
+concédant tous les droits et actions qui nous appartiennent
+sur ces biens, ne réservant pour nous que le fief, la
+seigneurie directe et l’hommage. Et nous constituons pour le
+moment le procureur dudit Jean pour posséder ces biens en
+son nom, jusqu’à ce qu’il puisse en prendre possession
+corporelle effective. (suit la clause de garantie ordinaire).
+Donné à Chambéry, le 25 juin 1360, sous notre sceau en
+témoignage de ce qui précède, sur rapport des seigneurs
+Aymon de Challand, Pierre de Montegil ?, Jean Ravisii,
+chancelier, et Guillaume Bon, rapport fait par ledit Aymon de
+Challand.
+(Tiré des archives du Palais de l’Isle à Annecy, le 2 juin 1693,
+par Nicollin, clavaire, et trouvé manuscrit, sans numéro, aux
+archives de Villard-Chabod.)
+\end{Verbatim}
+
+\section{Index et glossaire}
+
+\printglossary[title=Glossaire]
+\printindex[nom]
+\printindex[lieu]
+\printindex[notion]
+
+\printbibliography
+
+\end{document}

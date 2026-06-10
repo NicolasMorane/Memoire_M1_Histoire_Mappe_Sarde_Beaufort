@@ -1,0 +1,42 @@
+# LaTeX temporaires
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# R / RStudio
+.Rhistory
+.RData
+.Rproj.user/
+
+# Bibliothèque PDF
+0_Memoire/1 Bibliographie
+*.pdf
+
+# formats lourds
+*.jpg
+*.jpeg
+*.png
+*.zip
+*.docx
+*.xlsx
+*.xlsb
+
+# Windows
+Thumbs.db
+Desktop.ini

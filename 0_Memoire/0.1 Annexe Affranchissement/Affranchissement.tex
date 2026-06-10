@@ -1,0 +1,1461 @@
+
+\documentclass[a4paper,twoside,openany]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{graphicx} % Required for inserting images
+
+
+
+\usepackage{marginnote}
+%\usepackage{ulem} %pour les caractères barrés
+
+\usepackage{multirow}
+\usepackage{xifthen}
+
+\usepackage{makeidx}
+\usepackage{imakeidx}
+
+\geometry{hmargin=3cm,vmargin=2cm}
+\linespread{1.15}
+\title{Transcription de l'Affranchissement Général du mandement de Beaufort en Savoie}
+\author{Nicolas Morane - étudiant M1 SDH Panthéon-Sorbonne}
+\date{15 Janvier 2025}
+
+\usepackage[backend=biber, citestyle=verbose-trad2, bibstyle=verbose-trad2, citepages=omit, ibidpage=true, idemtracker=constrict, hyperref=false, sorting=nyt]{biblatex}
+\bibliography{bibliographie.bib}
+
+
+
+
+\makeindex[name=nom, title=Index nominum, options= -s perso.ist, columns=1]
+
+\usepackage{glossaries}
+\makeglossaries
+\newglossaryentry{rière}
+{
+    name=rière,
+    description={"dans le territoire de"}
+}
+\newglossaryentry{cens}
+{
+    name=cens,
+    description={Le cens est dû par celui qui a la propriété utile d'un bien foncier (généralement un paysan) à celui qui en a la propriété éminente (le seigneur, qui à l'Époque moderne n'est pas nécessairement un noble)}
+}
+\newglossaryentry{servis}
+{
+    name=servis,
+    description={"Les servis, appelés aussi censes, correspondent à des redevances annuelles et doivent être
+payés perpétuellement au seigneur, en sus des frais d’acquisition (introge) d’une terre
+dépendante de la seigneurie. Ils peuvent être dûs en argent, mais souvent en nature, redevances
+en blé par exemple, ou autres denrées. Les servis pèsent parfois très lourds eu égard à la
+rentabilité de la terre. Ces redevances seigneuriales, s’apparentant à une sorte de bail
+emphytéotique, s’ajoutent aux tailles, gabelles, dîmes et autres impôts"\footnote{\cite{Gachet2022}}}
+}
+\newglossaryentry{laodsindemnité}
+{
+    name=laods d'indemnité,
+    description={Laods d'indemnité est ...}
+}
+\newglossaryentry{laods}
+{
+    name=laods,
+    description={"Les loads sont des droits de mutations perçus par un seigneur lors de la vente d’une terre par
+un de ses sujets. Ils sont payés par l’acheteur. S’ils constituent une protection contre la
+spéculation foncière des plus riches, ils sont aussi un frein aux acquisitions par les plus pauvres,
+aux remembrements et à l’optimisation du travail des terres. Ils peuvent se monter jusqu’à un
+sixième de la valeur des transactions.
+Les loads et les servis concernent toutes les personnes qui ont acquis des biens fonciers
+dépendant du fief d’un seigneur. A noter que le seigneur peut être une personne physique mais
+également une abbaye, un évêché etc. Etre dépendant d’un fief ne signifie pas dans tous les cas
+une dépendance personnelle envers le seigneur, ni forcément l’appartenance à une classe sociale
+inférieure. Ceux qui dépendent personnellement d’un seigneur et qui sont de catégorie sociale
+inférieure sont les personnes dites taillables, mainmortables ou corvéables à merci. On utilise
+peu le terme de serf à l’époque moderne en Savoie. Sur ces personnes pèsent des charges
+seigneuriales supplémentaires, notamment des corvées, et surtout le droit d’échute." \footnote{\cite{Gachet2022}} }
+}
+
+\newglossaryentry{suffertes}
+{
+    name=suffertes,
+    description={droit de mutation que l'on percevait en sus du laod quand un fonds taillable était vendu à un homme de condition non taillable ou quand un fonds franc était acheté par un homme taillable}
+}
+\newglossaryentry{dîmes}
+{
+    name=dîmes,
+    description={redevance en nature ou en argent, portant principalement sur les revenus agricoles collectés en faveur de l’Église}
+}
+\newglossaryentry{décimes}
+{
+    name=décimes,
+    description={voir dîme}
+}
+\newglossaryentry{corvées}
+{
+    name=corvées,
+    description={"Les corvées sont des prestations périodiques dues aux seigneurs par leurs sujets. Il peut s’agir
+de labours de terres, de coupes de bois, de transports de matériaux etc. Selon leur nature elles
+peuvent être intégrées aux servis sans faire l’objet d’une terminologie à part" \footnote{\cite{Gachet2022}}}
+}
+\newglossaryentry{alpéages}
+{
+    name=alpéages,
+    description={appelé aussi "Auciège" est une redevance en nature c'était  le fruit d'un ou plusieurs  jours de lait pour l'utilisation d'un alpage en montagne. pour une étude sur l'Auciège voir \cite{Duparc}}
+}
+\newglossaryentry{droits de haut siège}
+{
+    name=droits de haut siège,
+    description={à definir}
+}
+\newglossaryentry{favettiers}
+{
+    name=favettiers,
+    description={(Savoie) (Droit) Paysans, bourgeois, gentilhommes assujettis aux redevances seigneuriales (load, sufferte, plaid, corvée, cens). }
+}
+\newglossaryentry{égances}
+{
+    name=égances,
+    description={fractionnement des charges foncières lors du partage d’une censive}
+}
+\newglossaryentry{péages}
+{
+    name=péages,
+    description={péages est ...}
+}
+
+
+\newglossaryentry{bans champêtres}
+{
+    name=bans champêtres,
+    description={bans de justice, voir aussi \cite{Berthier}}
+}
+
+\newglossaryentry{remèdes possessoriaux}
+{
+    name=remèdes possessoriaux,
+    description={remèdes possessoriaux est ...}
+}
+
+\newglossaryentry{bénéfices d'instances}
+{
+    name=bénéfices d'instances,
+    description={bénéfices d'instances est ...}
+}
+
+\newglossaryentry{rescindants}
+{
+    name=rescindants,
+    description={Demande tendante à faire annuler un acte, un jugement. On a jugé le rescindant. Par cet arrêt, on n’a jugé que le rescindant. Nous avons gagné le rescindant, c’est une présomption en notre faveur pour le rescisoire}
+}
+
+\newglossaryentry{rescisoire}
+{
+    name=rescisoire,
+    description={L’objet principal pour lequel on s’est pourvu, soit contre un acte, soit contre un jugement, et qui reste à juger, quand l’acte ou le jugement a été annulé. Le rescindant et le rescisoire ne sont pas jugés par le même arrêt}
+}
+\newglossaryentry{droit de pignoratitie}
+{
+    name=droit de pignoratitie,
+    description={Pignoratif ? Qui est relatif à un gage. Endossement pignoratif, qui transfère à l’endossataire les droits d’un créancier gagiste. Vieilli. Contrat pignoratif, forme de contrat de vente à réméré qui, dissimulant un prêt sur gage et s’apparentant à un pacte commissoire, est prohibée par la loi.}
+}
+\newglossaryentry{nomination des officiers de justice}
+{
+    name=nomination des officiers de justice,
+    description={le chatelain (souvent un notaire) est choisi par le seigneur pour le représenter sur son fief qui lui délègue notamment le rôle d'officier de basse justice}
+}
+
+\newglossaryentry{greffe}
+{
+    name=greffe,
+    description={greffe est ...}
+}
+\newglossaryentry{leyde sur le bétail}
+{
+    name=leyde sur le bétail,
+    description={La leyde était sous l'Ancien Régime en France (surtout au Moyen Âge) un droit féodal, sous la forme d'impôt, levé sur les marchandises, denrées et bestiaux vendus en foire et marché}
+}
+
+
+\newglossaryentry{hale}
+{
+    name=hale,
+    description={à définir}
+}
+
+
+\newglossaryentry{mense archiépiscopale}
+{
+    name=mense archiépiscopale,
+    description={ revenus liés aux possessions du clergé. On parle de Mense curiale, monacale, abbatiale, épiscopale. C’est un revenu destiné à la subsistance des ecclésiastiques, aux besoins du culte, à l’entretien des biens et de l’assistance aux pauvres.}
+}
+\newglossaryentry{droit des langues dû par les bouchers}
+{
+    name=droit des langues dû par les bouchers,
+    description={est un "prélèvement en nature des langues de boeufs et de vaches, et même parfois de tous les autres animaux abattus par les bouchers, ce droit est le plus souvent remplacé par une indemnité annuelle compensatrice" cf G Sangnier}
+}
+\newglossaryentry{recherche des cristaux}
+{
+    name=recherche des cristaux,
+    description={droit coutumier local, le seigneur se réservant les cristaux trouvés sur son territoire}
+}
+\newglossaryentry{droit d’avoir un banc placé}
+{
+    name=droit d’avoir un banc placé,
+    description={droit d’avoir un banc placé est ...}
+}
+\newglossaryentry{placer des patibulaires avec ses armoiries}
+{
+    name=placer des patibulaires avec ses armoiries,
+    description={est un moyen pour le seigneur d'un lieu de marquer son pouvoir de justice (haute, moyenne ou basse}
+}
+\newglossaryentry{échuttes}
+{
+    name=échuttes,
+    description={"Dans les procès et les débats qui ont régulièrement eu lieu entre les promoteurs
+d’affranchissements des « mainmortables » et leurs détracteurs, c’est sur le droit d’échute
+semble-t-il qu’on s’oppose le plus radicalement. En quoi consiste-t-il ? C’est le droit de
+propriété qu’un seigneur peut avoir sur les biens de ses sujets « taillables », lorsque ceux-ci
+décèdent sans héritiers « directs » (enfants mâles en général). Des coutumes régionales peuvent
+différer : en certains lieux ce ne sera pas la totalité des biens mais une partie seulement, en
+d’autres endroits l’existence de filles au décès pourra aussi moduler le droit d’échute, etc.
+Comme souvent sous l’ancien régime, pas de règle universelle sans particularités locales. Mais
+l’esprit est là : impossible à un serf de disposer et de tester librement de ses biens. D’où l’origine
+possible du mot « mainmortable », qui aurait la main morte, incapable de coucher par écrit un
+testament.
+Ce droit d’échute est d’autant plus mal vécu qu’il s’applique même sur des biens acquis à
+l’extérieur de la seigneurie. Ces mainmortables – taillables ou serfs – font également l’objet de
+mesures vexatoires : certaines fonctions ou certaines tenues vestimentaires leurs sont interdites." \footnote{\cite{Gachet2022}} }
+}
+
+\newglossaryentry{terriers}
+{
+    name=terriers,
+    description={registre contenant les lois et usages d'une seigneurie, la description des bien-fonds, les droits et conditions des personnes, ainsi que les redevances et obligations auxquelles elles sont soumises}
+}
+\newglossaryentry{litterés}
+{
+    name=litterés,
+    description={autres écrits}
+}
+\newglossaryentry{doages}
+{
+    name=doages,
+    description={doages est ...}
+}
+\newglossaryentry{banc du droit}
+{
+    name=banc du droit,
+    description={banc du droit est ...}
+}
+\newglossaryentry{prône}
+{
+    name=prône,
+    description={Instruction, accompagnée d'avis, qu'un prêtre fait aux fidèles à la messe paroissiale du dimanche}
+}
+\newglossaryentry{droit de reachapt}
+{
+    name=droit de reachapt,
+    description={droit de réachat}
+}
+\newglossaryentry{Laide}
+{
+    name=Laide,
+    description={ pour Leyde ? La leyde était sous l'Ancien Régime en France (surtout au Moyen Âge) un droit féodal, sous la forme d'impôt, levé sur les marchandises, denrées et bestiaux vendus en foire et marché}
+}
+\newglossaryentry{droit de pêche de chasse}
+{
+    name=droit de pêche de chasse,
+    description={droit de pêche, de chassee est ...}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Le document transcrit ci-dessous est conservé au sein des archives départementales de Savoie (73), dans les archives communales de la commune d'Hauteluce sous la cote : "E.suppl.944 - DD 1 (Cahier) - in 4° 20 feuillets"
+
+Cela correspond à un document de 40 pages dont 3 vierges, la transcription proprement dite est numérotée de 1 à 39 dans la marge pour faciliter la correspondance avec les photos des pages du manuscrit.
+
+Le document paraît être une copiée destinée aux archives de la "commune" d'Hauteluce, et contient deux parties: le document d'affranchissement générale concernant les quatre "communes" du mandement de Beaufort ainsi que la procuration passée par les communier d'Hauteluce dans le but de cet affranchissement.
+
+Contexte historique : Le roi de Piemont-Sardaigne et duc de Savoie, Charles-Emmanuel III de Savoie décide de permettre le rachat des droits féodaux par les communautés d’habitants par deux édits : l’édit du 20 janvier 1762, puis celui du 19 décembre 1771 
+
+\textit{"Le texte de 1762 supprimait purement et simplement la taillabilité personnelle envers la
+couronne. Concernant les seigneurs privés, elle permettait aux communautés d’habitants de
+réaliser un affranchissement collectif, en les chargeant elles-mêmes – via leur syndic - de la
+perception d’une indemnité seigneuriale due par chaque personne mainmortable. Après
+publication de listes des taillables, les négociations devaient s’engager avec les seigneurs
+concernés, sous l’arbitrage des intendants provinciaux. Ces derniers ne purent cependant
+contenir toutes les tensions entres habitants et seigneurs, tant au sujet de la validité des listes
+qu’au sujet des indemnités et de leur financement. Aussi le texte ne concernait que la taillabilité
+personnelle, et c’est là peut-être la raison de sa relative inefficacité. Nombre de charges
+seigneuriales relevaient en effet de la taillabilité réelle, celle associée aux terres taillables,
+indépendamment de la condition de leurs propriétaires. A quoi bon alors payer pour s’affranchir
+d’une taillabilité personnelle si l’on est toujours taillable sur certaines terres ?
+Neuf ans plus tard, Charles-Emmanuel II légifère sur un affranchissement général de la
+taillabilité personnelle, et réelle : c’est l’édit du 19 décembre 1771. Les affranchissements sont
+toujours l’aboutissement de longues négociations qui ne vont pas sans heurts, d’autant plus
+qu’on recourt à la vente de biens communaux pour boucler le financement de certaines
+procédures. Au final, le résultat est néanmoins significatif. Entre 17541 et 1792, 3 011 contrats
+d’affranchissements collectifs furent passés, atteignant la somme de 7 935 409 livres. La très
+grande majorité des actes (2 816 sur 3 011) sont postérieurs à l’édit de 17712. Ainsi, on estime
+à 65\% le nombre de fiefs affranchis à la veille de la Révolution, cette dernière ayant mis fin à
+toute condition servile."} \footnote{\cite{Gachet2022}}
+
+Les communautés du mandement de Beaufort n'ont pas attendu le deuxième décret, et ont finalisé le rachat des droits féodaux dés 1770.
+
+Remarques:
+\\- certains feuillets (pages impaires) sont numérotés, il est alors inscrit (Feuillet) en face du numéro
+\\- certains une série de paragraphes sont numérotés (1 à 19) mais une autre numérotation (inscrit en début de paragraphe) existe aussi, sans logique apparente
+\\- Les mots précédés d'un * sont définis dans un glossaire à la fin du document
+\\- il n'a pas été établi d'index des noms de lieux, étant donné que ceux-ci sont peu nombreux et sont répétés dans tout le texte:
+les quatre communautés du mandement de Beaufort à savoir :
+\begin{list}{}{\leftmargin 1cm}
+\item -Saint-Maxime ou St Maxime de Beaufort ou Beaufort
+\item -Hauteluce
+\item -Villard ou Villard de Beaufort
+\item - Queige
+\end{list}
+Sont cités aussi :
+\begin{list}{}{\leftmargin 1cm}
+\item -Chambéry , siège de l'administration du duché de Savoie
+\item -Turin, capital du Royaume de Piedmont-Sardaigne et du duché de Savoie
+\item -la Tarantaise et le Faucigny, deux mandements voisins de celui de Beaufort
+\end{list}
+\section{Transcription}
+
+\marginnote{\scriptsize Page 1}
+
+Tampon des Archives Communales -Savoie – Propriété Publique
+\begin{flushright}
+Affranchissement Général \footnote{Pour une étude générale sur les affranchissements voir : \cite{Bruchet}}
+\\vente et cession pour les
+\\Communautés de St Maxime,
+\\Hauteluce, du villard et de Queige
+\\mandement de Beaufort
+\\ par Le Sgr, marquis du dit lieu 
+\\£.81000
+\end{flushright}
+
+
+L'an mille sept cent septante et le seize du mois
+de janvier, à Chambéry avant midi dans la
+maison du seigneur de Lannoix \index[nom]{Lannoix@\textbf{Lannoix} (Seigneur de) } , par devant
+moi, notaire royal soussigné, et présent les témoins 
+enfin,  nommées, sest  personnellement établis
+et constitués le sieur Pierre Martin contrôleur de 
+trésorerie  générale de Savoie\footnote{"le contrôleur de 
+trésorerie  générale de Savoie était à l'époque..."}, \index[nom]{Martin@\textbf{Martin} (Pierre) !contrôleur de 
+trésorerie  générale de Savoie} natif et habitant
+de cette ville lequel degré en qualité de procureur
+général et spécial de S.(on) E.(xcellence) messire Joseph 
+François Louis Vicardel  Marquis de Fleury \index[nom]{Fleury@\textbf{Fleury}  (Joseph 
+François Louis, Vicardel Marquis de) }
+ministre d'État, chevalier d'honneur de son
+altesse royale madame la Duchesse de Savoie
+
+\marginnote{\scriptsize Page 2}
+
+et Chevalier Grand Croix des ordres de St Maurice 
+et Lazare, natif et habitant de la ville de Turin
+fils à feu messire François Joseph Nicolas Eléazar
+Vicardel Marquis de Fleury, \index[nom]{Fleury@\textbf{Fleury}  (Joseph Nicolas Eléazar, Vicardel Marquis de) }
+ministre du cabinet de sa majesté le Roy de 
+Pologne, Auguste premier et chevalier de l’ordre 
+suprême de Pologne dit de l’Aigle Blanc, par 
+procuration du vingt-quatre novembre proche 
+passé, reçue par le notaire Ostano \index[nom]{Ostano@\textbf{Ostano}  (Notaire de Turin) }de la ville de 
+Turin, dont l’expédition sera jointe à la Minute 
+du présent, pour y avoir au besoin recours, et 
+relativement aux conventions sous seing privé
+faites sous la réserve de l’approbation de sa Majesté 
+et non autrement, entre la dite excellence le Seigneur 
+Marquis de Fleury\index[nom]{Fleury@\textbf{Fleury}  (Joseph 
+François Louis, Vicardel Marquis de) }, et le Sr Michel, fils du Sr 
+Joseph Blanc \index[nom]{Blanc@\textbf{Blanc} (Michel, notaire et secrétaire de la communauté de St Maxime) }en qualité de procureur député 
+de la communauté de St Maxime de Beaufort, 
+par acte du quinze novembre mille sept cent 
+soixante-sept Chevallier Joly fils notaire \index[nom]{Chevallier Joly fils@\textbf{Chevallier Joly fils}  (notaire) }, le Sr Joseph 
+fils d’autre Joseph Bal notaire \index[nom]{Bal@\textbf{Bal}  (Joseph, notaire et secrétaire de la communauté d’Hauteluce) } et secrétaire de la 
+
+
+\marginnote{\scriptsize Page 3}
+
+communauté d’Hauteluce a procuré d’icelle
+par mandat du dix décembre mille sept cent 
+soixante-sept Blanc notaire le Sr Jean-Michel, fils de 
+feu Louis Chamiot Maitral \index[nom]{Chamiot Maitral@\textbf{Chamiot Maitral}  (Louis, député de la communauté du Villard et des particuliers de Queige) } député de la 
+communauté du Villard et des particuliers de 
+Queige, par procuration du vingt décembre même 
+année Maitral notaire  des dites conventions en date du 
+dix-neuf août mille sept cent soixante-huit, 
+sous la même réserve, a affranchi, cédé et vendu, 
+ainsi qu’il affranchit, cède et vend par le présent 
+en faveur de tous les particuliers des dites communautés 
+et paroisses, et aux dites communautés, à l’acceptation 
+du dit notaire Michel, fils du dit Sr Joseph Blanc
+secrétaire insinuateur\footnote{"un secrétaire insinuateur était à l'époque un notaire en charge d'un bureau d'insinuation (ou du tabellion), c'est-à-dire d'un bureau d'enregistrement par transcription de certains actes civils. Dans les États de Savoie à l'époque Moderne, le terme de tabellion désigne l'ensemble des actes insinués et, par extension, l'administration chargée de la transcription et de la conservation de ces actes. Le bureau du tabellion devait avoir une pièce pour recevoir le public et une pièce pour conserver les actes..."} \index[nom]{Blanc@\textbf{Blanc}  (Joseph, secrétaire insinuateur) }, natif et habitant de la 
+paroisse du dit St Maxime de Beaufort, de laquelle 
+il est secrétaire et député pour le fait du présent
+avec le dit Sr Blanc son père, par la procuration 
+cy dessus désignée, et des dits Sr joseph Bal, et
+Jean Michel Chamiot-Maitral procureurs députés 
+par les dites communautés d’Hauteluce, du Villard 
+de Beaufort et des particuliers de Queige à former
+
+
+\marginnote{\scriptsize Page 4}
+
+des mandats ainsi ci-dessus désignés, ici présents
+et acceptants pour les dites communautés, et pour tous
+ les dits particuliers et communautés d’ici scavoir,
+ il a affranchi et affranchit généralement et
+sans aucune exception les dites communautés et les 
+particuliers des dites paroisses et communautés et les
+particuliers de Queige, de tous devoirs 
+seigneuriaux que la dite excellence perçoit ou peut
+percevoir \gls{rière} des dites paroisses, en quoi ils consistent
+et puissent consister, tant en taillabilité réelle, que
+personnelle, comme en *\gls{cens} et censes, \gls{servis} , \gls{laods}, 
+\gls{laodsindemnité}, \gls{suffertes}, \gls{dîmes}, \gls{décimes}, 
+\gls{corvées}, \gls{alpéages}, \gls{droits de haut siège}, ensemble 
+tous hommages, réels et personnels et autres droits 
+de la susdite nature, tant à charges honoraires que 
+lucratives, tels qu’ils lui appartiennent tant en 
+vertu des terriers et reconnaissances que de la dite 
+inféodation du vingt-deux décembre mille six 
+cent soixante-deux, et des autres acquisitions 
+énoncées dans les dites conventions, en sorte que 
+dorénavant les biens et personnes des dites
+
+\marginnote{\scriptsize Page 5}
+
+\begin{flushright}
+(Feuillet) 3
+\end{flushright}	
+paroisses soient entièrement libres des dits devoirs 
+seigneuriaux, et féodaux et que les mêmes devoirs et
+ droits soient annulés, à perpétuité en faveur des 
+dites communautés et particuliers, et pour la plus facile 
+exécution d’un tel affranchissement général, la dite 
+Excellence a cédé et cède aux dites communautés 
+respectives le droit d’exiger des \gls{favettiers} les 
+sommes auxquelles, en correspectivité de leur 
+respectif affranchissement, seront taxés par 
+des plans, d'\gls{égances} qui seront dressés, et
+ autorisés par la personne que Sa Majesté \index[nom]{Charles-Emmanuel III de Savoie@\textbf{Charles-Emmanuel III de Savoie}  (roi de Sardaigne, duc de Savoie et prince de Piémont)!S.M.} voudra 
+commettre et déléguer à ces fins, en outre, la 
+dite Excellence\index[nom]{Fleury@\textbf{Fleury}  (Joseph François Louis, Vicardel Marquis de) } a vendu, cédé ainsi que par le 
+présent elle vend et cède aux dites communautés 
+les \gls{péages}, \gls{bans champêtres}, et tous biens 
+immeubles et ruraux qu’elle possède, à lui 
+appartenant dans le dit mandement, de la 
+possession desquels il s’est dévêtu et en a invêtu 
+les susnommés par la tradition d’une plume à 
+la manière accoutumée, leur cédant tous noms 
+
+\marginnote{\scriptsize Page 6}
+
+et actions résultant des droits tous interdits, 
+\gls{remèdes possessoriaux}, \gls{bénéfices d'instances}, tous
+\gls{rescindants}, \gls{rescisoire}, le \gls{droit de pignoratitie} et 
+autres semblables, pour la recherche, poursuite et 
+exaction desquels le dit Sr. martin \index[nom]{Martin@\textbf{Martin} (Pierre) !procureur du marquis de Fleury} en sa qualité
+constitué et substitué pour procureur du seigneur
+ marquis et des particuliers, communiers et les dites
+communautés en la personne de leurs députés ci-dessus
+nommés, et de ceux qu'elles pourront substituer, avec
+pouvoir d'en substituer encore d'autres, le tout sous 
+élection de domicile, sous la réserve expresse du 
+titre de marquis de Beaufort de la juridiction, 
+avec tous droits tant lucratifs, honorifiques, qu'autres 
+qui y sont relatifs, dans lesquels se trouvent 
+compris, la \gls{nomination des officiers de justice}, le 
+\gls{greffe}, la \gls{leyde sur le bétail}, la \gls{hale} qu’il possède 
+en indivision avec la \gls{mense archiépiscopale} de 
+Tarentaise, la chasse, la pêche, le \gls{droit des langues 
+dû par les bouchers}, et la \gls{recherche des 
+cristaux}, le \gls{droit d’avoir un banc placé} ainsi qu'il
+
+\marginnote{\scriptsize Page 7}
+
+\begin{flushright}
+(Feuillet) 4
+\end{flushright}	
+convient à la qualité des seigneurs du lieu, dans
+l'église paroissiale du bourg de St Maxime qui est
+la principale terre du dit mandement de Beaufort,
+comme encore le droit de faire \gls{placer des
+patibulaires avec ses armoiries}, tous lesquels droits
+sont ici expressément réservés conformément
+aux dites conventions, et desquelles ladite excellence
+devra jouir sans la moindre contestation et ses
+successeurs à perpétuité. Sans que lesdites Communautés
+puissent apporter aucun trouble à cette paisible
+jouissance sous quel prétexte que ce soit, pas même
+parce que quelques-uns des dits droits ne se
+trouveraient pas spécifiés dans ladite inféodation. 
+Du vingt-deux décembre mil six cent soixante-
+deux, à quoi lesdits députés, en leur qualité
+renoncent expressément à l'acceptation du dit Sr
+Martin\index[nom]{Martin@\textbf{Martin} (Pierre) !}
+, aussi en la qualité, lesdits droits réservés
+comme dessus, étant entrés en considération
+dans le prix du présent affranchissement auquel
+sa dite excellence ne se serait pas déterminée sans
+
+\marginnote{\scriptsize Page 8}
+
+cela, les autres droits ci-dessus vendus et cédés
+avec les dits fiefs, se trouvant tant dans le dit
+mandement qu’ ailleurs où le tout peut s’étendre
+sur les personnes et sur les biens de quelque manière
+que ce soit, pour que les dits particuliers, communiers
+et communautés jouissent sans autre des droits
+ci-dessus cédés et affranchis ainsi qu’elles ont
+commencé à jouir dès le premier janvier de
+l’année mille sept cent soixante-neuf, relativement
+aux conventions privées ci-dessus désignées,
+maintenant le dit sieur Martin\index[nom]{Martin@\textbf{Martin} (Pierre) !} en sa qualité, les
+droits ci-dessus cédés exempts de tous troubles,
+molestier, et autres empêchements de tout le passé
+jusqu'à ce jour, se soumettent pour ce à toutes
+évictions et garantie a forme du droit, avec
+promesse de communiquer aux dits particuliers,
+communier, et communautés, à leur première
+réquisition moyennant chargé tous les titres,
+terriers, extraits, cartes, et autres documents qui
+leurs seront nécessaires pour les \gls{égances} et
+
+\marginnote{\scriptsize Page 9}
+
+\begin{flushright}
+(Feuillet) 5
+\end{flushright}	
+répartitions à faire, et généralement tous ceux qui
+concernent tous les droits cédés lesquels il promet
+leur remettre lorsqu'ils sera entièrement payé, à
+l'exception néanmoins de ceux qui affecteront les
+droits réservés, dont ils promet seulement la
+communication en cas de besoin, pour que les
+communautés en puissent prendre des extraits
+en forme, promettant les Sr. députés, de leur côté,
+que si après la rémission desdits titres et terriers,
+le seigneur marquis se trouve en avoir besoin,
+pour que ses fermiers puissent exiger les arrérages
+qui leur seront dus, ils en feront faire la
+communication moyennant charge, étant bien
+exprimé que le présent ne pourra préjudicier aux
+fermiers et droit ayant du dit seigneur marquis,
+tant pour les \gls{servis} engagées que pour les \gls{échuttes},
+de tout le passé, jusqu’au premier janvier mille
+sept cent soixante-neuf, ce qui sera fait inventaire
+de tous les titres, \gls{terriers}, et autres \gls{litterés} dont
+le dit seigneur marquis devra faire la rémission
+
+\marginnote{\scriptsize Page 10}
+
+lors de son payement et dont il a ci de plus promit
+la communication. Le présent affranchissements
+général, cession et vente faits pour le prix de quatre
+vingt mille livres, et mille livres pour épingles,
+lesquelles mille livres ont été présentement et
+réellement comptées, savoir cinq cent trente-
+huit livres dix-huit sols dix deniers par ledit
+Sr Blanc en sa qualité, en vingt-deux pistoles
+neuves, valant chacune vingt-quatre livres et le
+surplus en sols et pièces de deux deniers, trois cent
+vingt-quatre livres neuf sols deux deniers par le
+dit Sr Bal aussi sa qualité en treize pistoles
+et demi, et le surplus en sols et une pièce de deux
+deniers, et enfin trente-six livres douze sols par
+le dit Sr Maitral  en sa qualité en cinq pistoles
+et demi et le surplus en sols le tout par ledit Sr .
+Martin\index[nom]{Martin@\textbf{Martin} (Pierre) !} vérifié, retiré et emboursé au vu de moi
+notaire et témoins, dont il se contente et quitte,
+lesquels payements ils ont fait par proportion à la
+cote de chacune des communautés relativement
+
+\marginnote{\scriptsize Page 11}
+
+\begin{flushright}
+(Feuillet) 6
+\end{flushright}	
+aux conventions faites entre elles, le cinq juillet
+mil sept cent soixante-huit qui seront ténorisées
+enfin du présent avec celles faites avec le dit
+seigneur marquis qui feront corps à icelui. Les
+parties déclarant s'y rapporter pour tout ce qui
+ne se trouvera pas suffisamment expliqué, eu
+égard que les payements de ladite somme de quatre-
+vingt mille livres devra se faire suivant les dites
+conventions, et laquelle susdite somme, les dits
+communiers et communautés promettent payer
+solidairement par le ministère de leurs députés,
+qui à ces fins renoncent à tous bénéfices de
+division, d’ordre, et de discussion dans le terme
+de dix ans, et en différents payements dont
+chacun ne sera pas moindre de huit mille livres,
+en avertissant néanmoins le dit seigneur marquis
+deux mois auparavant, lequel seigneur sera obligé
+de faire recevoir les dits payements en Savoie,
+dans la présente ville par le ministère d'un
+procureur qui sera à ces fins constitué, et auquel
+on pourra faire les avertissements ci-dessus stipulés
+
+\marginnote{\scriptsize Page 12}
+
+et jusqu’au dit paiement les susnommés toujours 
+solidairement et  avec les mêmes renonciations,
+promettent payer l’intérêt de ladite somme
+totale de quatre-vingt mille livres aussi dans
+cette ville entre les mains de celui qui sera
+député par le dit seigneur marquis, et c’est à raison
+de trois pour cent, lequel intérêt sera diminué
+à proportion des paiements qui seront faits de
+la manière ci-dessus convenue, et sera payé à
+l’échéance de chaque année relativement
+aux susdites conventions, suivant lesquelles il doit
+être payé de la dite somme totale celle de trente-
+six mille sept cent cinq livres quatorze sols
+par la communauté de Ste Maxime, trente-deux
+mille trois cent soixante-six livres six sols
+par celle d’Hauteluce, et dix mille neuf cent
+vingt-huit livres par celles du Villard et  Queige,
+sans que la division faite entre les dites communautés
+pour le paiement de la susdite somme totale
+de quatre-vingt mille livres puisse en aucune
+manière préjudicier à l’obligation solidaire par
+elles ci-devant contractée en faveur de Sa dite
+
+\marginnote{\scriptsize Page 13}
+
+\begin{flushright}
+(Feuillet) 7
+\end{flushright}	
+excellence le seigneur marquis de Fleury, entre
+toutes lesquelles communautés les immeubles ci-
+dessus vendus, restent indivis, avec convention que
+sur les paiements qui seront faits en déduction de
+ladite somme capitale, les premiers deniers seront
+employés au paiement de la mieux value réservée
+au royal patrimoine, le seigneur marquis restant
+chargé d’en faire faire l’acceptation de la
+manière qui plaira à Sa Majesté de l’ordonner.
+Le dit seigneur se chargeant également de fournir
+une application assurée, et de faire à ces fins toutes
+procédures nécessaires pour regard de la somme
+qui sera déterminée devant être appliquée pour
+raison des fidéicommis et primogénitures qui se
+trouvent dans la famille dudit seigneur marquis,
+laquelle application devra être faite suivant
+les déterminations qui seront données par
+Sa Majesté sur les instances qui seront faites de
+la part dudit seigneur marquis, et tout ce que
+de plus a été promis observer, tant par le dit
+Sieur. Martin\index[nom]{Martin@\textbf{Martin} (Pierre) !}
+que par les députés ci-dessus nommés
+
+\marginnote{\scriptsize Page 14} 
+
+avec promesse de le faire observer chacun, en
+ce qui les concerne, aux mêmes respectives de tous
+dépends \gls{doages}, intérêts et à l’obligation et
+constitution, savoir de la part du dit Sieur Martin\index[nom]{Martin@\textbf{Martin} (Pierre) !},
+des biens du dit seigneur marquis de Fleury,
+qui se constitue tenir en vertu de ladite
+procuration, et de la part des dits députés
+ceux des dits communiers et des dits communautés,
+qui se constituent également tenir en vertu
+des procurations ci-dessus énoncées, les expéditions
+desquelles seront dûment jointes à la minute
+du présent avec l’approbation faite par la
+communauté du village de Beaufort, par
+acte du vingt-huit décembre mil sept cent
+soixante-huit. Sieur Maitral notaire \index[nom]{Maitral@\textbf{Maitral} (notaire)}fait et prononcé
+au dit lieu en présence du sieur François Chevallier,
+marchand \index[nom]{Chevallier@\textbf{Chevallier} (François, marchand, témoin)}, et de maître Pierre Dominique Richard \index[nom]{Richard@\textbf{Richard} (Dominique, substitut procureur du Sénat, témoin)},
+substitut procureur du Sénat, tous deux habitants
+de la présente ville, témoins requis.
+
+\marginnote{\scriptsize Page 15}
+
+\begin{flushright}
+(Feuillet) 8
+\end{flushright}
+
+\begin{flushright}
+Teneur de la procuration passée		
+\\par les communiers d’Hauteluce		
+\\à				
+\\Maitre Joseph Bal, notaire secrétaire		
+\\du dit Hauteluce\index[nom]{Bal@\textbf{Bal}  (Joseph, notaire et secrétaire de la communauté d’Hauteluce) }.	
+\end{flushright}
+
+L’an mille sept cent soixante-sept, et le sixième
+jour du mois de décembre, à l’issue de la messe
+paroissiale d’Hauteluce, et au \gls{banc du droit}
+du dit lieu, ainsi qu’au conseil de la dite paroisse
+d’Hauteluce, avec celles de St. Maxime et du Villard
+qui, avec la paroisse de Queige, composent
+le territoire et marquisat de Beaufort, avaient
+dés longtemps projetés, à l’exemple des paroisses
+leurs voisines de Faucigny et de Tarentaise,
+d’acquérir les fiefs qui dépendent du dit marquisat, et
+tous autres fiefs qui peuvent s’étendre
+sur le territoire des dites paroisses, aux fins de
+s’affranchir de toute servitude et de rendre
+libres pour leurs personnes, ainsi que leurs biens de
+tout hommages personnels et réels d’en supprimer
+et anéantir les effets, et les motifs en étaient justes
+
+\marginnote{\scriptsize Page 16}
+
+et louables, puisqu’il en devait résulter un grand
+avantage pour les particuliers des dites communautés,
+et les conseils des dites trois paroisses appuyées du
+suffrage du plus grand nombre et des plus
+considérables habitants d’icelles auxquels ils en
+avaient fait part, en firent faire leur  proposition
+respectueuse au seigneur marquis de Fleury et
+de Beaufort\index[nom]{Fleury@\textbf{Fleury}  (Joseph François Louis, Vicardel Marquis de) !marquis de Beaufort}, qui par une suite de ses bontés
+ordinaires pour les dites communautés leur fit
+savoir qu’il ne désapprouvait point leur
+démarche, et donnerait volontiers les mains,
+leur envoyant à cet effet une note des différents
+fiefs qu’il avait dans le mandement du dit Beaufort
+et du prix des acquisitions qui en avaient été faites,
+laquelle est ci-après ténorisée.
+
+\begin{center}
+2
+\end{center}
+1° La Baronnie de Beaufort érigée ensuite en
+marquisat en faveur du Seigneur marquis Joseph
+François Vicardel de Fleury\index[nom]{Fleury@\textbf{Fleury}  (Joseph Nicolas Eléazar, Vicardel Marquis de) }, l’un de ses autheurs,
+a été échangée par contrat du vingt-deux décembre
+mille sept cent soixante-deux Marthar notaire\index[nom]{Marthar@\textbf{Marthar} (notaire)}
+
+
+\marginnote{\scriptsize Page 17}
+
+\begin{flushright}
+(Feuillet) 9
+\end{flushright}		
+contre le palais des ambassadeurs dont le dit
+seigneur marquis avait peu auparavant fait
+l’acquisition du marquis Vecuso de la Tour\index[nom]{Vecuso de la Tour@\textbf{Vecuso de la Tour}  (Marquis) },
+pour le prix de seize mille cinq cent ducatons
+de la valeur pour lors de quatre livres quinze
+sols pièce, prix auquel il a été estimé par ledit
+contrat d’échange, et à la dite terre de Beaufort
+à cette somme évaluée, ainsi qu’à celle de
+deux mille sept cent cinquante florins, de
+mieux value, soit nonante cinq florins de
+rente annuelle suivant la patente d’inféodation
+donnée par la chambre des comptes, par laquelle
+patente d’inféodation le droit de rachat
+perpétuel est réservé à la couronne lesquels
+seize mille cinq cent ducatons sur le pied
+porté par ledit état reviennent à septante 
+huit mille trois cent septante cinq livres,
+
+\begin{center}
+3
+\end{center}
+2°La rente de Gerbais, acquise ensuite par le
+même seigneur de Fleury, du Seigneur baron
+de Blancheville \index[nom]{Blancheville@\textbf{Blancheville}  (baron de) }
+ par contrat du vingt-huit
+
+\marginnote{\scriptsize Page 18}
+
+décembre mille six cent soixante-quatre, Dardel 
+notaire 
+\index[nom]{Dardel@\textbf{Dardel} (notaire)}
+, rapportant mille livres florins de revenu 
+pour le prix de vingt-trois mille huit cent florins, 
+revient à raison de treize sols quatre deniers 
+chaque florin, soit les trois florins faisant deux 
+livres, à quinze mille huit cent soixante-six 
+livres treize sols quatre deniers.
+
+\begin{center}
+4
+\end{center}
+3°La rente de Bellegarde acquise par le Seigneur
+ Nicolas Éléazar Vicardel, marquis de Toivier\index[nom]{Fleury@\textbf{Fleury}  (Joseph Nicolas Eléazar, Vicardel Marquis de) !marquis de Toivier}, des
+ messieurs d’Ancieu\index[nom]{Ancieu@\textbf{Ancieu} (messieurs d’)}, pour le prix de mille florins, et
+ la rente, d’Arnolled autre petit fief qu’il a acquis
+ par acte du vingt-quatre décembre septembre
+ mil six cent nonante-huit, Bertier Notaire \index[nom]{Bertier@\textbf{Bertier}  (notaire)} pour le prix
+ de huit cent florins, lesquels deux pris
+sur le même pied que ci-dessus arrivent à 
+deux mille huit cent livres.
+
+\begin{center}
+5
+\end{center}
+4° Le moderne marquis a de plus acquis par contrat
+ du vingt-sept août mil sept cent quarante-quatre
+reçu par moi notaire de Joseph Vibert \index[nom]{Vibert@\textbf{Vibert}  (Joseph, notaire)}un petit fief
+
+\marginnote{\scriptsize Page 19}
+
+\begin{flushright}
+(Feuillet) 10
+\end{flushright}		
+appelée la Rente d’Anvey ( ?) pour le prix de mille
+ deux cent livres.
+
+\begin{center}
+6
+\end{center}
+Toutes lesquelles sommes réunies emportent la
+ totale de nonante-six mille six cent quarante-une 
+livres, treize sols, quatre deniers, de laquelle suivant 
+la lettre du seigneur marquis, prélevant pour le 
+titre, droit de juridiction, et environ pour trois 
+cent livres de droits seigneuriaux qu’il dit en 
+être inséparables, il resterait donc quatre-vingt 
+mille livres en capital principal, ou deux mille 
+quatre cents livres de rente annuelle au trois pour 
+cent qu’il paye aux communautés.
+
+\begin{center}
+7
+\end{center}
+D’après la réception duquel état donné, pour
+ledit seigneur marquis, les conseils des dites trois 
+paroisses s’étant assemblés, ils auraient pour 
+parvenir au but dudit affranchissement délibérés, 
+ainsi qu’ils l’ont fait par l’acte de délibération 
+motivé du onze octobre dernier, de supplier le 
+seigneur intendant général de permettre dans chacune 
+des dites trois paroisses la convocation d’une
+
+\marginnote{\scriptsize Page 20}
+
+assemblée générale, et elle leur fut permise par
+décret mis en fin d’icelle délibération du vingt-
+neuf même mois, avec commission au premier notaire
+sur ce requis d’en dresser par les actes et verbaux,
+en conséquence des syndics et conseil de cette Communauté
+d’Hauteluce, prièrent le Révérend Curé de faire les
+annonces de la dite assemblée générale, dimanche
+dernier vingt-neuf novembre à son prône, ainsi
+qu’il se pratique en tel cas, ce qui fut exécuté, et
+le dit jour à l’issue de la messe paroissiale, le
+Sergent Vionnet \index[nom]{Vionnet@\textbf{Vionnet}  (Sergent) } en fit au présent banc du droit
+de nouveau l’avertissements avec la lecture de la
+dite délibération et décret dont il afficha une copie
+au dit banc du droit, avec intimation qu’il fit à
+tous les particuliers, chefs de famille de cette
+paroisse, de s’assembler à ces fins ce jourd’hui à
+la présente heure a formé de son exploit du dit jour,
+et outre le peuple en à de nouveau jour ce jourd’hui été
+instruit et convoqué tant par le son de la cloche
+à la manière accoutumée, par de nouvelles annonces
+
+
+\marginnote{\scriptsize Page 21}
+
+\begin{flushright}
+(Feuillet) 11
+\end{flushright}
+au \gls{prône}, et par de nouvelles criées de la part du
+dit Sergent Vionnet\index[nom]{Vionnet@\textbf{Vionnet}  (Sergent) }, à l’issue de la messe paroissiale,
+par lesquelles il a averti le peuple en la personne des
+chefs de famille de s’assembler au présent lieu du
+banc du droit pour délibérer sur le dit affranchissement,
+et de la manière de l’exécuter, lequel a été exécuté
+comme s’ensuit
+
+\begin{center}
+8
+\end{center}
+À ces causes par devant, moi Michel Blanc, notaire 
+et secrétaire de la communauté de St. Maxime\index[nom]{Blanc@\textbf{Blanc} (Michel, notaire et secrétaire de la communauté de St Maxime) },
+soussigné, et en présence des témoins enfin nommés, se
+sont personnellement établis et constitués les susnommés
+syndic, conseillers et communiers de la paroisse
+d’Hauteluce, savoir : 
+Rev. Sr. François Girod Roux prieur et curé d’icelle, \index[nom]{Girod Roux (François, Rev. Sr. , Prieur et curé d'Hauteluce) }
+Rev. Sr. Claude Baptandier prêtre et vicaire, \index[nom]{Baptandier (Claude, Rev. Sr. , prêtre et vicaire) }
+Rev. Sr. Pierre Reymond prêtre et régent, \index[nom]{Reymond (Pierre, Rev. Sr. , prêtre et régent) }
+Honorable Joseph Baptandier syndic, \index[nom]{Baptandier (Joseph, Honorable, Syndic) }
+Joseph Bal Fourrer conseiller, \index[nom]{Bal Fourier (Joseph, Conseiller) }
+Barthélémy Vibert  Lechet, \index[nom]{Vibert Lechet (Barthélémy) }
+Donaz Vionnet, \index[nom]{Vionnet (Donaz) }
+Louis Vionnet Fuasset, \index[nom]{Vionnet Fuasset (Louis) }
+et, 
+Nicolas Desduc, \index[nom]{Desduc (Nicolas) }
+tous membres du dit conseil,
+\\
+\marginnote{\scriptsize Page 22}
+
+Louis Bal Fontaine, \index[nom]{Bal Fontaine (Louis) }
+Pierre Mailliand Gonod pour son père malade, \index[nom]{Mailliand Gonod (Pierre, pour son père malade) }
+Nicolas Thovex Comtoz dit la Salaz, \index[nom]{Thovex Comtoz (Nicolas, dit Salaz) }
+Jacques Rey, \index[nom]{Rey (Jacques) }
+Nicolas fils de Donat Thovex Comtoz, \index[nom]{Thovex Comtoz (Nicolas, fils de Donat Thovex Comtoz) }
+Joseph Bal Pétré, \index[nom]{Bal Pétré (Joseph) }
+Michel à feu Pierre Guiguet, \index[nom]{Guiguet (Michel, à feu Pierre Guiguet) }
+Joseph Piccard, \index[nom]{Piccard (Joseph) }
+François à feu Louis Favre, \index[nom]{Favre (François, à feu Louis Favre) }
+Jacques Pichol, \index[nom]{Pichol (Jacques) }
+Pierre Ducretel, \index[nom]{Ducretel (Pierre) }
+Philippe Vionnet dit Gabiollet, \index[nom]{Vionnet (Philippe) }
+François Perrier, \index[nom]{Perrier (François) }
+Jacques à feu Joseph Pichol, \index[nom]{Pichol (Jacques, à feu Joseph Pichol) }
+Louis Braisaz, \index[nom]{Braisaz (Louis) }
+Claude Guiguoz, \index[nom]{Guiguoz (Claude) }
+André Lachenal Siordet, \index[nom]{Lachenal Siordet (André) }
+Pierre à feu Jean Baptiste Bal Pétré, \index[nom]{Bal Pétré (Pierre, à feu Jean Baptiste Bal Pétré) }
+Louis à feu Jacques Guiguet, \index[nom]{Guiguet (Louis, à feu Jacque Guiguet) }
+Joseph Alex, \index[nom]{Alex (Joseph) }
+Pierre Ligeon, \index[nom]{Ligeon (Pierre) }
+Joseph Constantin, \index[nom]{Constantin (Joseph) }
+Jean-Pierre Bardet Bardillion, \index[nom]{Bardet Bardillion (Jean-Pierre) }
+Jacques Palluel Blanc, \index[nom]{Palluel Blanc (Jacques) }
+Jean Roset, \index[nom]{Roset (Jean) }
+Joseph Franc Carmetrant, \index[nom]{Franc Carmetrant (Joseph) }
+Claude Bal, \index[nom]{Bal (Claude) }
+Michel à feu Jean Guiguet, \index[nom]{Guiguet (Michel, à feu Jean Guiguet) }
+Pierre Duret Viallet, \index[nom]{Duret Viallet (Pierre) }
+André Braisaz Cretet, \index[nom]{Braisaz Cretet (André) }
+Jacques Bouchage, \index[nom]{Bouchage (Jacques) }
+Mammert Deduc, \index[nom]{Deduc (Mammert) }
+Joseph Cuvex Combaz, \index[nom]{Cuvex Combaz (Joseph) }
+Pierre Verpil, \index[nom]{Verpil (Pierre) }
+Louis Bron Bozon, \index[nom]{Bron Bozon (Louis) }
+Alexis Garzent, \index[nom]{Garzend (Alexis) }
+Sr. Jean-Baptiste Christine, \index[nom]{Christiné (Jean-Baptiste) }
+François Guiguoz Cuvex, \index[nom]{Guiguoz Cuvex (François) }
+Jean-Baptiste Guigoz, \index[nom]{Guigoz (Jean-Baptiste) }
+Pierre Bochet Fenet, \index[nom]{Bochet Fenet (Pierre) }
+Claude Mailliand, \index[nom]{Mailliand (Claude) }
+Michel Pichol, \index[nom]{Pichol (Michel) }
+Jacques Mailliand, \index[nom]{Mailliand (Jacques) }
+\\
+\marginnote{\scriptsize Page 23}
+
+Jean-Baptiste Durand, \index[nom]{Durand (Jean-Baptiste) }
+Jean-Baptiste Bardet Bardillon, \index[nom]{Bardet Bardillon (Jean-Baptiste) }
+Jean François Bal Pétré, \index[nom]{Bal Pétré (Jean François) }
+Nicolas Mailliand Gonod, \index[nom]{Mailliand Gonod (Nicolas) }
+Joseph Braisaz, \index[nom]{Braisaz (Joseph) }
+Nicolas Cuvex Micholin, \index[nom]{Cuvex Micholin (Nicolas) }
+Joseph Guiguoz, \index[nom]{Guiguoz (Joseph) }
+Jean-Jacques Vionnet Ducrey, \index[nom]{Vionnet Ducray (Jean-Jacques) }
+Pierre Blanchard, \index[nom]{Blanchard (Pierre) }
+Claude Christian, \index[nom]{Christian (Claude) }
+François Martin, \index[nom]{Martin (François) }
+Claude Durand, \index[nom]{Durand (Claude) }
+Antoine Avocat, \index[nom]{Avocat (Antoine) }
+Michel Baptamdier Santiquet, \index[nom]{Baptandier Santiquet (Michel) }
+François fils de Pierre Pichol pour son père malade, \index[nom]{Pichol (François, fils de Pierre Pichol, pour son père malade) }
+Joseph Poupelloz, \index[nom]{Poupelloz (Joseph) }
+François Verpil, \index[nom]{Verpil (François) }
+Aymé Cuvex Combaz, \index[nom]{Cuvex Combaz (Aymé) }
+Claude Mailliand Gonod, \index[nom]{Mailliand Gonod (Claude) }
+Joseph Vionnet Fuapset, \index[nom]{Vionnet Fuapset (Joseph) }
+Pierre à feu Jean François Bal, \index[nom]{Bal (Pierre, à feu Jean François Bal) }
+Donat Mailliand Gonod, \index[nom]{Mailliand Gonod (Donat) }
+Pierre à feu Lachenal Siordet, \index[nom]{Lachenal Siordet (Pierre, à feu Lachenal Siordet) }
+Jacques Poupelloz, \index[nom]{Poupelloz (Jacques) }
+Joseph Bron Bozon, \index[nom]{Bron Bozon (Joseph) }
+Mathieu Bal Pétré, \index[nom]{Bal Pétré (Mathieu) }
+Claude-François Babullin, \index[nom]{Babullin (Claude-François) }
+Antoine Guiguet, \index[nom]{Guiguet (Antoine) }
+Claude Braisaz, \index[nom]{Braisaz (Claude) }
+Jean-Pierre Viard, \index[nom]{Viard (Jean-Pierre) }
+Mermet Favre Coutillet, \index[nom]{Favre Cotillet (Mermet) }
+Mermert à feu André Palluel Blanc, \index[nom]{Palluel Blanc (Mermet, à feu André Palluel Blanc) }
+Pierre à feu Nicolas Guiguet, \index[nom]{Guiguet (Pierre, à feu Nicolas Guiguet) }
+André Favre Cotillet, \index[nom]{Favre Cotillet (André) }
+Le sieur Donat Bal, \index[nom]{Bal (Donat) }
+Joseph Roger, \index[nom]{Roger (Joseph) }
+François Viardet, \index[nom]{Viardet (François) }
+Joseph Perrouz, \index[nom]{Perrouz (Joseph) }
+Jacques Bal Pétré, \index[nom]{Bal Pétré (Jacques) }
+Jean-Baptiste Vibert Bourgeois, \index[nom]{Vibert Bourgeois (Jean-Baptiste) }
+Joseph Favre Cotillet, \index[nom]{Favre Cotillet (Joseph) }
+Pierre Cuvex Combaz, \index[nom]{Cuvex Combaz (Pierre) }
+
+\marginnote{\scriptsize Page 24}
+
+Nicolas Bal, \index[nom]{Bal (Nicolas) }
+Claude Duc Pithiod, \index[nom]{Duc Pithiod (Claude) }
+Mammert à feu Jean Baptiste Palluel Blanc, \index[nom]{Palluel Blanc (Mammert, à feu Jean Baptiste Palluel Blanc) }
+Joseph à feu François Bal, \index[nom]{Bal (Joseph, à feu François Bal) }
+Claude Avocat, \index[nom]{Avocat (Claude) }
+André Nicolas Gamin, \index[nom]{Gamin (André Nicolas) }
+André Ligeon, \index[nom]{Ligeon (André) }
+Joseph Ducretet, \index[nom]{Ducretet (Joseph) }
+Mammert Ducretet, \index[nom]{Ducretet (Mammert) }
+Claude Favre Cotillet, \index[nom]{Favre Cotillet (Claude) }
+Joseph Ligeon Ligeonnet, \index[nom]{Ligeon Ligeonnet (Joseph) }
+Sylvestre Lachenal Viordet, \index[nom]{Lachenal Siordet (Sylvestre) }
+Jean-Baptiste Ducretet, \index[nom]{Ducretet (Jean-Baptiste) }
+François Carcey, \index[nom]{Carcey (François) }
+Joseph-Marie Guiguoz, \index[nom]{Guiguoz (Joseph-Marie) }
+Jean-Baptiste Guiguet, \index[nom]{Guiguet (Jean-Baptiste) }
+Pierre Ligeon comme tuteur de Donza Christiné, \index[nom]{Ligeon (Pierre, tuteur de Donza Christiné) }
+Jean-Baptiste Ligeon Ligeonnet à feu Jacques, \index[nom]{Ligeon Ligeonnet (Jean-Baptiste) }
+Jean-Baptiste Ligeon, \index[nom]{Ligeon (Jean-Baptiste) }
+Jean-Baptiste Ralard., \index[nom]{Ralard (Jean-Baptiste) }
+\\
+À tous lesquels se disent excéder les deux tiers des
+chefs de famille de ladite paroisse d’Hauteluce,
+et y étant actuellement, les trois faisant le tout,
+lesquels, après avoir ouï la lecture de la délibération
+du douze octobre, et du décret de péréquation du
+seigneur intendant général, soit du Sr. sus-délégué,
+de la lettre du dit seigneur marquis de Beaufort
+et ses propositions, et après avoir fait leurs réflexions
+sur leur contenu, et sur ce qui pouvait y avoir du 
+
+
+\marginnote{\scriptsize Page 25}
+
+rapport, tant à leur nom qu’à celui des autres
+absents, ont convenu et délibéré d’une voix
+unanime, comme s’ensuit :
+\begin{center}
+9
+\end{center}
+1° Que ses députés qui seront élus, feront leur
+très humble supplication à S.M.\index[nom]{Charles-Emmanuel III de Savoie@\textbf{Charles-Emmanuel III de Savoie}  (roi de Sardaigne, duc de Savoie et prince de Piémont)!S.M.} pour qu’il lui
+plaise leur permettre d’acquérir conjointement avec
+les communiers de Beaufort et du Villard du dit
+seigneur marquis de Fleury\index[nom]{Fleury@\textbf{Fleury}  (Joseph François Louis, Vicardel Marquis de) }, les fiefs à lui appartenant
+et qui dépendent du dit seigneur marquis
+de Beaufort, que les autres ci-devant mentionnés
+sous la seule réserve en faveur dudit seigneur marquis
+du titre de la juridiction et des droits qui y sont
+purement relatifs, tant honorifiques qu’autre,
+et que pour la validité de telles acquisitions, il plaise
+à S.M.\index[nom]{Charles-Emmanuel III de Savoie@\textbf{Charles-Emmanuel III de Savoie}  (roi de Sardaigne, duc de Savoie et prince de Piémont)!S.M.} ou de se départit du \gls{droit de reachapt}
+réservé par les patentes d’inféodation, sous
+l’offre de payer telle et modérée somme, à la-
+quelle ils pourront être taxés. L’intention des dits
+
+\marginnote{\scriptsize Page 26}
+
+communiers étant d’éteindre et d’anéantir pour eux et
+leurs successeurs et à perpétuité, tous hommages,
+quelconques personnels et réels et de rendre les
+personnes et les biens astreints et sujets aux dits fiefs
+entièrement libres, en telle sorte qu’il ne reste
+par rapport à leurs personnes et à leurs biens, aucun
+droit des dits fiefs, en quoi qu’ils consistent et puissent consister
+sauf la simple juridiction, \gls{droit de pêche de chasse},
+\gls{Laide}, minéraux qui sont les seuls droits qu’elles
+prétendent excepter de leur acquisition, tout le surplus
+des dits fiefs devant être compris dans l’acquisition
+qu’ils se proposent aux fins de l’entière extinction
+de tous autres droits perçus ou à percevoir pour raison
+des dits fiefs en dépendance d’iceux ou à raison du
+dit marquisat, tant riere le territoire des trois paroisses,
+que riere la paroisse de Queige, et ailleurs où les dits
+fiefs peuvent s’étendre sur les personnes et sur les
+biens.
+
+\begin{center}
+10
+\end{center}
+À ces fins ils donnent à leurs députés pouvoir autant
+ample qu’il pourra être nécessaire pour leur recours
+
+\marginnote{\scriptsize Page 27}
+
+à S.M., traiter et négocier avec les Royales
+Finances tant pour raison des fiefs appartenants au dit
+seigneur marquis de Beaufort \index[nom]{Fleury@\textbf{Fleury}  (Joseph François Louis, Vicardel Marquis de) !marquis de Beaufort} qu’à d’autres seigneurs
+dans les territoires et appartenances des dites communautés,
+et pour qu’il lui plaise leur permettre de faire
+l’acquisition des dits fiefs, moyennant finance, donnant
+par avance tout plus ample pouvoir à leurs députés
+pour le faire des acquisitions au prix qu’il avisera.
+
+\begin{center}
+11
+\end{center}
+2° Ils autorisent leurs députés à se prévaloir à leur
+nom des offres et déclarations à eux faites par
+le dit seigneur marquis de Beaufort\index[nom]{Fleury@\textbf{Fleury}  (Joseph François Louis, Vicardel Marquis de) !marquis de Beaufort} conjointement
+aux communautés de St. Maxime, du Villard, de
+traiter avec le dit seigneur au prix de quatre-vingt
+mille livres, ils ne peuvent obtenir un meilleur
+traitement et condition, à même ils s’en remettent
+à sa direction pour les épingles qu’il conviendra de
+donner
+\begin{center}
+12
+\end{center}
+3° Leur député devra stipuler tant au regard du dit
+seigneur marquis, qu’autres seigneurs de fiefs
+
+\marginnote{\scriptsize Page 28}
+
+Que les communiers de leurs paroisses et ceux de Ste-
+Maxime et du Villard qui s’unissent pour faire les
+dites acquisitions, pourront libérer du prix d’icelles
+en divers payements et lorsqu’ils seront en faculté de
+le faire, pourvu que cependant quant au dit seigneur
+marquis chaque payement ne soit pas moindre de
+huit mille livres, et quant aux autres seigneurs de fiefs,
+de deux mille livres, lorsque le prix doublera cette
+somme, et que jusqu’au dit payement il en sera
+payé la cense qui sera convenue par leurs députés au
+dernier les moins onéreux pour les communautés.
+
+\begin{center}
+13
+\end{center}
+4° Que dans le cas, qui suivant les négociations il
+fallût trouver de l’argent comptant, pour s’acquitter
+en partie du prix des acquisitions, leur député pourra
+faire les emprunts nécessaires, tant par constitution de
+rente qu’autrement, et obliger pour la restitution
+des capitaux et payement des censes ou intérêt,
+tous les biens de la communauté en général, et ceux
+
+\marginnote{\scriptsize Page 29}
+
+des particuliers qui sont intervenus au présent, présents
+et avenir, aux constitutions d’icelles, et pour tous
+dépends que pourraient supporter les prêteurs.
+\\
+\begin{center}
+14
+\end{center}
+5° Ils donnent en outre pouvoir à leur député de faire
+tels emprunts qu’ils jugeront être nécessaires, et par
+défaut de fonds, pour fournir aux frais indispensables
+qu’ils auront à supporter pour lesdites négociations,
+frais de transport dans la ville de Turin, séjour
+dans icelle, qu’autres même pour payer les sommes
+auxquelles ils seront taxés par la finance des dites
+acquisitions, à quelles fins ils supplient S.M.\index[nom]{Charles-Emmanuel III de Savoie@\textbf{Charles-Emmanuel III de Savoie}  (roi de Sardaigne, duc de Savoie et prince de Piémont)!S.M.}
+de les autoriser pour ce regard.
+\\
+\begin{center}
+15
+\end{center}
+6°Il devra encore supplier très humblement S.M.\index[nom]{Charles-Emmanuel III de Savoie@\textbf{Charles-Emmanuel III de Savoie}  (roi de Sardaigne, duc de Savoie et prince de Piémont)!S.M.}
+de leur permettre la vente et aliénation des dîmes
+et autres choses aliénables qui seront comprises dans
+les ventes à passer avec ledit seigneur marquis
+et autres seigneurs de fiefs, ensemble la vente et 
+
+\marginnote{\scriptsize Page 30}
+
+aliénation des communaux qui à leur paroisse
+d’Hauteluce, et en laissant toute fois une quantité
+suffisante pour inalper les bestiaux qui s’hivernent
+dans l’endroit, pour être les deniers en provenant
+employés à payer en partie le prix des acquisitions,
+la finance ou les frais à supporter par le moyen de
+laquelle vente, les acquisitions des dits fiefs deviendront
+moins onéreuses à la communauté, et pour vérifier,
+connaitre et fixer les communaux ou portions iceux
+qui devront être vendues, ils nomment par avance
+trois personnes gens experts, à savoir le Sr. Joseph
+à feu François Bal\index[nom]{Bal@\textbf{Bal} (Joseph)}, Honorable Pierre à feu Jean-François
+Bal Pétré\index[nom]{Bal Pétré@\textbf{Bal Pétré} (Pierre)} et Claude à feu Claude Braisaz\index[nom]{Braisaz@\textbf{Braisaz} (Claude)}, tous trois
+du dit Hauteluce, avec offre d’y faire intervenir
+un géomètre député de la part du Sgnr., intendant
+général, le syndic ou un conseiller et le secrétaire
+de la communauté, lequel secrétaire recevra et
+réduira par écrit en forme de verbal tout ce qui
+
+\marginnote{\scriptsize Page 31}
+
+
+aura été fait, vérifié, arrêté et convenu pour ce
+regard, et qu’en autorisant la communauté à vendre
+ainsi partie de ses communaux, il plaise à S.M.\index[nom]{Charles-Emmanuel III de Savoie@\textbf{Charles-Emmanuel III de Savoie}  (roi de Sardaigne, duc de Savoie et prince de Piémont)!S.M.}
+leur accorder un délégué auquel devra s’adresser
+leur député pour pouvoir les faire exposer en vente
+et enchères, et auquel il appartiendra d’en approuver et
+autoriser les expéditions qui en seront faites aux
+enchérisseurs, lesquels soient tenus d’en délivrer le
+prix entre les mains du receveur que le conseil
+établira, et dont la quittance suffira pour leur
+plein payement acquittement.
+\\
+\begin{center}
+16
+\end{center}
+7°Et comme plusieurs ont usurpés sur les communaux,
+surtout les aboutissants, ils donnent pouvoir à
+leur dit député de faire recherche des usurpations
+et de traiter avec ceux qu’il connaîtra être dans
+le dit cas, régler et convenir avec eux du
+relâchement auquel ils seront tenus, même à prix
+d’argent, et dans le cas que ceux qui auront ainsi
+
+\marginnote{\scriptsize Page 32}
+usurpés, ne veuillent régler à l’amiable, leurs députés
+en autorisé par le présent à les y contraindre par
+les voies judiciaires.
+\\
+\begin{center}
+17
+\end{center}
+8°Qu’attendu que le prix qui pourra retirer des
+parties des communaux ne pourra faire qu’une partie
+du montant des dépenses, et pour en venir au moyen
+d’apurer, il restera autant des grosses sommes, et pour
+qu’un chacun supporte la charge à proportion du bénéfice
+qu’il en doit ressentir, il est de nécessité d’en venir à
+une répartition, à ces fins leurs députés suppliera
+S.M.\index[nom]{Charles-Emmanuel III de Savoie@\textbf{Charles-Emmanuel III de Savoie}  (roi de Sardaigne, duc de Savoie et prince de Piémont)!S.M.} de leur permettre de faire procéder à
+une estime des servitudes auxquelles chaque particulier
+peut être astreint pour sa personne ou pour ses
+biens par des commissaires qui seront choisis à
+ces fins par leurs dits députés, laquelle devra être
+basse et ménagée, pour que la charge leur soit
+rendue plus supportable, à laquelle taxe en fait
+de servis ne devra excéder un capital formé sur le
+pied du cinq pour cent du montant d’iceux
+
+\marginnote{\scriptsize Page 33}
+
+
+et de ladite taxe il en sera dressé un état [...]  
+a devoir être approuvé par le seigneur intendant général
+étant loisible aux dits particuliers de se libérer de ce que
+chacun se trouvera taxé entre les mains du même
+receveur ci-devant a établir par le conseil et
+jusqu’à ce ils  en payeront annuellement l’intérêt
+sur le même pied que la communauté sera obligée
+de le payer pour le prix des dites acquisitions ou sur
+le même pied qu’elle le payera en cas de d’emprunt
+en venant à avoir lieu à faire des payements par
+remboursement ou autrement pour le bien de la
+communauté, par la liberté qu’elle aura de s’acquitter
+en partie brisée, et en ce cas les dits particuliers pourront
+être contraints d’en payer les capitaux, et le surplus
+à quoi pourrait arriver le prix des dites acquisitions
+finance frais à faire en conséquence au-delà tant du
+produit de la vente des communaux que des taxes
+à imposer aux dits particuliers, sur le pied ci-dessus.
+Il sera porté sur le bilan de la cotte générique
+et rapporté sur la taille d’un chacun, et comme
+les fiefs qu’on se propose d’acquérir tant du dit
+
+\marginnote{\scriptsize Page 34}
+
+Seigneur marquis qu’autres peuvent s’étendre pour
+quelque portion sur la paroisse de Queige, et autres
+terrains du voisinage, S.M.\index[nom]{Charles-Emmanuel III de Savoie@\textbf{Charles-Emmanuel III de Savoie}  (roi de Sardaigne, duc de Savoie et prince de Piémont)!S.M.} sera suppliée qu’on
+exige des particuliers qui seront contraints à quelques
+servitudes, pour leur personne ou pour leurs biens,
+l’estime et la taxe qui en sera faite par des commissaires
+nommés respectivement,
+
+\begin{center}
+18
+\end{center}
+9° En conséquence de ce qui a été convenu entre le dit
+conseils des trois communautés réunies pour le
+fait des dits affranchissements et narré dans leur
+délibération du dit jour douze octobre sujet de la
+répartition à faire entre elles, il a été actuellement
+arrêté qu’on s’en tiendra à ce qui a été convenu à ce
+sujet, que chacune des dites trois paroisses payeront le
+capital au dernier vingt du montant de la servitude
+et des différents droits auxquels elle est en particulier
+tenue, en conformité quant à la dite servitude des
+cottes sommaires de chaque paroisse, et de la somme
+portée par l’état que lesdits Seigneurs doivent en avoir remis
+au bureau de la péréquation lors d’icelle et le surplus
+du montant de la dites dépense sera réparti sur
+
+\marginnote{\scriptsize Page 35}
+
+les dites trois paroisses, et chacun suivant le bilan
+de la taille royale, à la quelle chacune est taxée
+mais, chacune des dites trois paroisses supportera en
+son particulier, les frais de ses députés et autres
+nécessaires à faire pour la réparation n’y ayant que
+les sommes auxquelles arriveront le prix des acquisitions
+des fiefs qui sont communs en elles, et s’étendent
+sur leur territoire réciproque, ainsi que la finance
+pour les droits réservés à la couronne qui doivent se
+répartir entre elles, de la manière ci-dessus par la-
+quelle répartition le député aura tout pouvoir,
+
+\begin{center}
+19
+\end{center}
+
+et pour procéder à tout ce que dessus, et faire tout ce qu’il
+conviendra pour parvenir aux dites acquisitions, les susnommés
+syndic, conseillers et particuliers, excédant les deux
+tiers, à leur nom, et des autres communiers absents,
+ont députés pour leur procureur spécial et général
+une des qualités ne dérogeant à l’autre ni au contraire
+Me Joseph fils du dit Joseph Bal notaire, et secrétaire
+de la présente communauté d’Hauteluce \index[nom]{Bal@\textbf{Bal}  (Joseph, notaire et secrétaire de la communauté d’Hauteluce) }, habitant,
+et originaire d’icelle, ici présent,, auquel les dits
+comparants donnent  plein pouvoir d’agir, et passer
+tous actes et contrats suivant et de la manière
+
+\marginnote{\scriptsize Page 36}
+
+ci-devant expliquée, pour les causes et cas y exprimés 
+obliger avec clause de constitut les biens de la 
+communauté et ceux des particuliers, ainsi que 
+par le présent ils les obligent, et pour tous dépens, 
+dommages, intérêts qui pourraient provenir de 
+l’inexécution et généralement faire tout ce qui sera 
+requis et nécessaire ici tenu pour exprimé, se pourvoir 
+à tous tribunaux et office dont pourra ressortir la 
+connaissance, approbation et vérification des contrats avec 
+pouvoir de substituer procureur en son propre lieu 
+et place, et qui aura le même pouvoir que lui et 
+élisant domicile en la personne du substitut comme 
+du constitué, avec promesse que font les dits constituants 
+de relever leur dit procureur et ses substitués de toutes 
+charges à supporter des dépens et frais qu’ils 
+feront occasion du présent, et de s’en tenir à ces 
+fins à la note qu’ils en donneront et pour ce qui est 
+de leur vacation et transport dans les différents 
+endroits, de même que pour leurs frais de voiture 
+et nourriture le tout leur sera payé à la taxe 
+qu’en faira  le seigneur intendant général aux mêmes
+
+\marginnote{\scriptsize Page 37}
+
+peines, obligations et constitution des biens de la 
+communauté, et des particuliers d’icelle, les dits 
+constituant par pacte exprès promettant de s’en 
+tenir pour les dépenses à faire à l’occasion et en 
+dépendance du contenu au présent à la note 
+qu’en donnera le dit député de même qu’à celle 
+qu’en donnera du temps de ses vacations, et de n’y 
+contredire moyennant qu’elle soit assermentée 
+de sa part sans autre forme et formalité à quoi 
+ils renoncent par le présent par l’entière confiance 
+qu’ils ont en sa probité. et clause requise fait 
+et prononcé en présence de Maitre Jean-Baptiste Blanc 
+notaire\index[nom]{Blanc@\textbf{Blanc} (Jean-Baptiste, notaire, témoin) }, et d’honorable Maxime Vibert Veched \index[nom]{Vibert Veched@\textbf{Vibert Veched} (Maxime, témoin) }tous deux 
+de la paroisse de St Maxime témoins requis 
+lesquels avec les dits. 
+
+
+
+
+Joseph Bal-Fournier, \index[nom]{Bal-Fournier (Joseph) }
+Louis Vionnet Fuapset, \index[nom]{Vionnet Fuapset (Louis) }
+Révérent Baptandier vicaire, \index[nom]{Baptandier (Révérent, vicaire) }
+Révérend. Reymond prêtre, \index[nom]{Reymond (Pierre, Rev. Sr. , prêtre et régent) }
+Révérend. Girod Roux curé, \index[nom]{Girod Roux (François, Rev. Sr. , Prieur et curé d'Hauteluce) }
+Louis Braisaz, \index[nom]{Braisaz (Louis) }
+Louis Guiguet, \index[nom]{Guiguet (Louis) }
+Jean-Pierre Burdillion, \index[nom]{Burdillion (Jean-Pierre) }
+Louis Palluel-Blanc, \index[nom]{Palluel-Blanc (Louis) }
+Claude Bal, \index[nom]{Bal (Claude) }
+Joseph Cuvex Combaz, \index[nom]{Cuvex Combaz (Joseph) }
+Louis Bron Bozon, \index[nom]{Bron Bozon (Louis) }
+Jean-Baptiste Christiné, \index[nom]{Christiné (Jean-Baptiste) }
+François Guiguet, \index[nom]{Guiguet (François) }
+Pierre Bochet, \index[nom]{Bochet (Pierre) }
+
+\marginnote{\scriptsize Page 38}
+
+François Cuvex, \index[nom]{Cuvex (François) }
+Jacques Malliard, \index[nom]{Malliard (Jacques) }
+Jean-Baptiste Durand, \index[nom]{Durand (Jean-Baptiste) }
+Jean François Bal pétré, \index[nom]{Bal Pétré (Jean François) }
+Jean Guigue, \index[nom]{Guigue (Jean) }
+Claude Durand, \index[nom]{Durand (Claude) }
+François Martin, \index[nom]{Martin (François) }
+François Pichol, \index[nom]{Pichol (François) }
+Michel Baptandier Santiquet, \index[nom]{Baptandier Santiquet (Michel) }
+Aymé Cuvex Combaz, \index[nom]{Cuvex Combaz (Aymé) }
+Claude Malliard, \index[nom]{Malliard (Claude) }
+Pierre Bal, \index[nom]{Bal (Pierre) }
+Claude François Cabullin, \index[nom]{Cabullin (Claude François) }
+Claude Braisaz, \index[nom]{Braisaz (Claude) }
+Jacques Bal Pétré, \index[nom]{Bal Pétré (Jacques) }
+Jean-Baptiste Vibert Bourgeois, \index[nom]{Vibert Bourgeois (Jean-Baptiste) }
+Joseph Faure Couvillier, \index[nom]{Faure Couvillier (Joseph) }
+Joseph Perroud, \index[nom]{Perroud (Joseph) }
+Claude Duc Pithiod, \index[nom]{Duc Pithiod (Claude) }
+Joseph Duret, \index[nom]{Duret (Joseph) }
+Mammert Palluel Blanc, \index[nom]{Palluel Blanc (Mammert) }
+Joseph Bal, \index[nom]{Bal (Joseph) }
+Isidore Nicolas Gamin, \index[nom]{Gamin (Isidore Nicolas) }
+André Ligeon, \index[nom]{Ligeon (André) }
+Claude Favre Cotillet, \index[nom]{Favre Cotillet (Claude) }
+Joseph Ligeon Ligeonnet, \index[nom]{Ligeon Ligeonnet (Joseph) }
+Sylvestre Lachenal, \index[nom]{Lachenal (Sylvestre) }
+Jean-Baptiste Ducretet, \index[nom]{Ducretet (Jean-Baptiste) }
+Marie Joseph Guigoz, \index[nom]{Guigoz (Marie Joseph) }
+François Carrey, \index[nom]{Carrey (François) }
+Pierre Bonnet Ligeon, \index[nom]{Bonnet Ligeon (Pierre) }
+Jean-Baptiste Ligeon Ligeonnet, \index[nom]{Ligeon Ligeonnet (Jean-Baptiste) }
+Jean-Baptiste Ligeon, \index[nom]{Ligeon (Jean-Baptiste) }
+André Favre Cotillet, \index[nom]{Favre Cotillet (André) }
+Jacque DeDuc, \index[nom]{DeDuc (Jacque) }
+Donat Bal, \index[nom]{Bal (Donat) }
+Jean-Baptiste Braisaz,\index[nom]{Braisaz (Jean-Baptiste) }
+et le dit Me Bal notaire\index[nom]{Bal@\textbf{Bal}  (Joseph, notaire et secrétaire de la communauté d’Hauteluce) } ont signé sur ma minute
+et tous les autres constituant qui sont illettrés
+de ce en quoi y ont fait leur marque, à moi notaire
+sous-signé ait le présent expédié au dit Me Bal
+après l’avoir faire insinuer au bureau du
+
+\marginnote{\scriptsize Page 39}
+
+
+Département de Beaufort [...]  trois cents
+trente, payé trois livres pour le droit à former du
+reçu du Sr.Blanc Secrétaire insinuateur
+mon père\index[nom]{Blanc@\textbf{Blanc}  (Joseph, secrétaire insinuateur) }, du cinq […] mil sept cent soixante-
+huit signé par me Blanc, notaire index[nom]{Blanc@\textbf{Blanc} (Michel, notaire et secrétaire de la communauté de St Maxime) }
+
+(Signature manuscrite en bas de page)
+
+
+
+
+
+
+
+
+
+
+
+\printindex[nom]
+\newpage
+\printglossary
+\newpage
+\printbibliography
+\end{document}
+
+
