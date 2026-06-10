@@ -23,6 +23,18 @@
 .Rhistory
 .RData
 .Rproj.user/
+.RData
+
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
 
 # Bibliothèque PDF
 0_Memoire/1 Bibliographie
